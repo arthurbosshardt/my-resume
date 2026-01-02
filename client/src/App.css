@@ -1,6 +1,6 @@
 .app {
   height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #e8e8e3;
   padding: 10px;
   overflow: hidden;
   display: flex;
@@ -8,7 +8,8 @@
 }
 
 .resume-container {
-  max-width: 1400px;
+  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   background: white;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -21,9 +22,6 @@
 }
 
 .resume-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 0;
   flex: 1;
   overflow: hidden;
   min-height: 0;
@@ -63,6 +61,83 @@
   100% { transform: rotate(360deg); }
 }
 
+@media (max-width: 1620px) {
+  .resume-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Styles communs pour les titres de section */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #cc553e;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-icon {
+  font-size: 1.6rem;
+  color: #cc553e;
+}
+
+/* Styles communs pour les tags de compétences */
+.skill-tag {
+  background: #cc553e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(204, 85, 62, 0.2);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.skill-tag:hover {
+  box-shadow: 0 4px 8px rgba(204, 85, 62, 0.3);
+  background: #b84a35;
+}
+
+/* Styles communs pour toutes les cartes du CV */
+.experience-item,
+.education-item,
+.technical-subcategory,
+.skills-category-card,
+.language-item {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #e8e8e3;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.skills-category-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-item:hover,
+.education-item:hover,
+.technical-subcategory:hover,
+.skills-category-card:hover,
+.language-item:hover {
+  box-shadow: 0 6px 20px rgba(204, 85, 62, 0.25);
+  outline: 2px solid #cc553e;
+  outline-offset: -2px;
+}
+
+.language-item {
+  padding: 16px;
+}
+
 @media (max-width: 968px) {
   .app {
     padding: 5px;
@@ -71,17 +146,9 @@
   .resume-container {
     max-height: calc(100vh - 10px);
   }
-
-  .resume-content {
-    grid-template-columns: 1fr;
-  }
   
   .main-content {
     padding: 20px;
-  }
-
-  .sidebar {
-    max-height: 300px;
   }
 }
 
