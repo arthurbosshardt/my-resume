@@ -10,24 +10,23 @@
 
 .education-item {
   display: flex;
-  gap: 15px;
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid #764ba2;
-  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.education-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+/* Styles de base mutualisés dans App.css */
 
 .education-period {
   font-weight: 600;
-  color: #764ba2;
-  font-size: 1rem;
+  color: #cc553e;
+  background: transparent;
+  border: 2px solid #cc553e;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
   min-width: 120px;
+  text-align: center;
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -35,27 +34,67 @@
   flex: 1;
 }
 
+.education-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.education-school-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.school-icon {
+  font-size: 1.1rem;
+  color: #cc553e;
+  flex-shrink: 0;
+}
+
 .education-title {
   font-size: 1.2rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+.education-location-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.education-location-info .location-icon {
+  font-size: 0.9rem;
+  color: #cc553e;
+}
+
+.education-location {
+  font-weight: 500;
 }
 
 .education-description {
   color: #666;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 0.95rem;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
   .education-item {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
-  .education-period {
+  .education-period,
+  .experience-period {
     min-width: auto;
+    width: 100%;
   }
 }
 
