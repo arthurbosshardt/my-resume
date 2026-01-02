@@ -2,6 +2,20 @@
   height: 100%;
 }
 
+.technical-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .technical-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .skills-category {
   margin-bottom: 20px;
 }
@@ -13,33 +27,66 @@
   margin-bottom: 12px;
 }
 
+.technical-subcategory {
+  margin-bottom: 24px;
+}
+
+/* Styles de base mutualisés dans App.css */
+
+.subcategory-header {
+  margin-bottom: 10px;
+}
+
+.subcategory-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cc553e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subcategory-icon {
+  font-size: 0.9rem;
+  color: #cc553e;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  color: #cc553e;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+.sort-button:hover {
+  background: rgba(204, 85, 62, 0.1);
+  transform: scale(1.1);
+}
+
+.sort-tooltip {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.skill-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.skill-tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
-}
-
-.skill-tag.soft-skill {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.skill-tag.concept {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  margin-top: 14px;
 }
 
 

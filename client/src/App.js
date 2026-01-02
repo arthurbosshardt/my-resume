@@ -6,7 +6,7 @@ import Breadcrumb from './components/Breadcrumb';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
-import Sidebar from './components/Sidebar';
+import SoftSkills from './components/SoftSkills';
 
 function App() {
   const [resumeData, setResumeData] = useState(null);
@@ -56,8 +56,10 @@ function App() {
         return <Experience experience={resumeData.experience} />;
       case 'education':
         return <Education education={resumeData.education} />;
-      case 'skills':
+      case 'hardSkills':
         return <Skills skills={resumeData.skills} />;
+      case 'softSkills':
+        return <SoftSkills skills={resumeData.skills} />;
       default:
         return <Experience experience={resumeData.experience} />;
     }
@@ -75,7 +77,6 @@ function App() {
           <div className="main-content">
             {renderSection()}
           </div>
-          <Sidebar skills={resumeData.skills} personal={resumeData.personal} />
         </div>
       </div>
     </div>

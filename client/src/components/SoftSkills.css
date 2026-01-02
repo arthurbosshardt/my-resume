@@ -1,0 +1,116 @@
+.soft-skills-section {
+  height: 100%;
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+  align-items: stretch;
+}
+
+.languages-title {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.languages-full-width {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.skills-category {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #cc553e;
+  margin-bottom: 14px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-icon {
+  font-size: 1rem;
+  color: #cc553e;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Styles de base mutualisés dans App.css */
+
+.language-name-level {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-name {
+  font-size: 1.05rem;
+}
+
+.language-level {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.language-detail {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-top: 6px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.language-label-bold {
+  font-weight: 700;
+  color: #333;
+}
+
+.language-certification {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #555;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.toeic-label {
+  font-weight: 700;
+  color: #333;
+}
+
