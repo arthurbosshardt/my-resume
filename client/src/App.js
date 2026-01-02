@@ -74,12 +74,14 @@ function App() {
   return (
     <div className="app">
       <div className="resume-container">
-        <Header personal={resumeData.personal} />
+        <Header 
+          personal={resumeData.personal}
+          currentLanguage={i18n.language}
+          onChangeLanguage={changeLanguage}
+        />
         <Breadcrumb 
           currentSection={currentSection} 
           onSectionChange={setCurrentSection}
-          currentLanguage={i18n.language}
-          onChangeLanguage={changeLanguage}
         />
         <div className="resume-content">
           <div className="main-content">

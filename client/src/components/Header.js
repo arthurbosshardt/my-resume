@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaHome, FaBirthdayCake } from 'react-icons/fa';
+import ReactCountryFlag from 'react-country-flag';
 import './Header.css';
 
-const Header = ({ personal }) => {
+const Header = ({ personal, currentLanguage, onChangeLanguage }) => {
   const { t } = useTranslation();
   const [imageError, setImageError] = useState(false);
   
@@ -25,6 +26,22 @@ const Header = ({ personal }) => {
             <FaHome className="location-icon" />
             {t('header.location')}
           </p>
+          <div className="header-language-toggle">
+            <button
+              className={`header-language-toggle-btn ${currentLanguage === 'en' ? 'active' : ''}`}
+              onClick={() => onChangeLanguage('en')}
+              title="English"
+            >
+              <ReactCountryFlag countryCode="GB" svg style={{ width: '1.2em', height: '1.2em' }} />
+            </button>
+            <button
+              className={`header-language-toggle-btn ${currentLanguage === 'fr' ? 'active' : ''}`}
+              onClick={() => onChangeLanguage('fr')}
+              title="Français"
+            >
+              <ReactCountryFlag countryCode="FR" svg style={{ width: '1.2em', height: '1.2em' }} />
+            </button>
+          </div>
         </div>
         <div className="header-center">
           <div className="header-links">
@@ -47,7 +64,7 @@ const Header = ({ personal }) => {
               @arthur_bosshardt
             </a>
             <a href={`tel:${personal.contact.phone}`} className="contact-link">
-              <FaPhone className="contact-icon" />
+              <FaPhone className="phone-icon" />
               {personal.contact.phone}
             </a>
             <a href={`mailto:${personal.contact.email}`} className="contact-link">
