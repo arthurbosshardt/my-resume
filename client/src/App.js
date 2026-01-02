@@ -1,0 +1,87 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './App.css';
+import Header from './components/Header';
+import Breadcrumb from './components/Breadcrumb';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Skills from './components/Skills';
+import Sidebar from './components/Sidebar';
+
+function App() {
+  const [resumeData, setResumeData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [currentSection, setCurrentSection] = useState('experience');
+
+  useEffect(() => {
+    const fetchResume = async () => {
+      try {
+        const response = await axios.get('/api/resume');
+        setResumeData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchResume();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <div className="spinner"></div>
+        <p>Loading resume...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="error">
+        <p>Error loading resume: {error}</p>
+      </div>
+    );
+  }
+
+  if (!resumeData) {
+    return null;
+  }
+
+  const renderSection = () => {
+    switch (currentSection) {
+      case 'experience':
+        return <Experience experience={resumeData.experience} />;
+      case 'education':
+        return <Education education={resumeData.education} />;
+      case 'skills':
+        return <Skills skills={resumeData.skills} />;
+      default:
+        return <Experience experience={resumeData.experience} />;
+    }
+  };
+
+  return (
+    <div className="app">
+      <div className="resume-container">
+        <Header personal={resumeData.personal} />
+        <Breadcrumb 
+          currentSection={currentSection} 
+          onSectionChange={setCurrentSection} 
+        />
+        <div className="resume-content">
+          <div className="main-content">
+            {renderSection()}
+          </div>
+          <Sidebar skills={resumeData.skills} personal={resumeData.personal} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+

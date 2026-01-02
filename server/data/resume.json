@@ -1,0 +1,180 @@
+{
+  "personal": {
+    "name": "Arthur BOSSHARDT",
+    "age": 27,
+    "location": "France",
+    "role": "Full-Stack Developer",
+    "contact": {
+      "phone": "+33 6 37 60 12 77",
+      "email": "arthur.bosshardt@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "period": "2025",
+      "title": "Full-Stack Developer",
+      "company": "DARWIN",
+      "location": "Annecy",
+      "projects": [
+        {
+          "client": "Crédit Agricole",
+          "technologies": ["Java Springboot", "Native front application"],
+          "description": "Internal CA application to track and manage activity in order to secure a performance bonus. Use of Copilot."
+        }
+      ]
+    },
+    {
+      "period": "2023 - 2025",
+      "title": "Full-Stack Developer",
+      "company": "QIM INFO",
+      "location": "Annecy",
+      "projects": [
+        {
+          "client": "Crédit Agricole Titres",
+          "technologies": ["Java Springboot", "JSP front application"],
+          "description": "Visual redesign project with Angular 16. Business context: stock market and portfolio application."
+        }
+      ]
+    },
+    {
+      "period": "2021 - 2023",
+      "title": "Full-Stack Developer",
+      "company": "CAPGEMINI",
+      "location": "Nantes",
+      "projects": [
+        {
+          "client": "SNCF",
+          "technologies": ["Java Springboot", "AngularJS application"],
+          "description": "Ergonomic redesign and migration to Angular 14. Business context: incident reporting tool for SNCF railway lines."
+        }
+      ]
+    },
+    {
+      "period": "2018 - 2021",
+      "title": "Big Data Developer",
+      "company": "CAPGEMINI",
+      "location": "Nantes",
+      "projects": [
+        {
+          "client": "SNCF",
+          "technologies": ["ELK", ".NET", "Python TensorFlow"],
+          "description": "AI-based display recognition in train stations and onboard. ELK and .NET for technical and functional monitoring of all application stacks. Use of Python TensorFlow for recognition."
+        }
+      ]
+    },
+    {
+      "period": "2018",
+      "title": "Web Developer",
+      "company": "ACCENTURE",
+      "location": "Nantes",
+      "projects": [
+        {
+          "client": "Internal",
+          "technologies": ["JHipster"],
+          "description": "Development of an application with JHipster toolkit."
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "2025",
+      "title": "React framework courses",
+      "description": "Courses about React framework as IT web and mobile developer."
+    },
+    {
+      "period": "2024",
+      "title": "Angular framework courses",
+      "description": "Courses about Angular framework with Orsys."
+    },
+    {
+      "period": "2022",
+      "title": "SCRUM Master Certification",
+      "description": "PSM I - Professional Scrum Master 1 Scrum.org."
+    },
+    {
+      "period": "2019 - 2021",
+      "title": "Master's Degree EPSI School - Nantes",
+      "description": "RNCP Level 7 Certification - Expert in IT and Information Systems. Work-study program at Capgemini (3 weeks / 1 week). Project management, software engineering, Big Data & AI specialization, thesis on technical monitoring."
+    },
+    {
+      "period": "2018 - 2019",
+      "title": "Professional Bachelor's Degree MIAR - Nantes",
+      "description": "Work-study program at Capgemini (3 weeks / 1 week). Object-oriented programming, Mobile development, Client/Server Web, Development tools, Distributed programming..."
+    },
+    {
+      "period": "2016 - 2018",
+      "title": "DUT in Computer Science - Nantes",
+      "description": "IT modules (web development, databases, networks). General education (English, law, accounting, project management)."
+    }
+  ],
+  "skills": {
+    "main": [
+      "HTML / CSS",
+      "Javascript",
+      "Java",
+      "Angular",
+      "Git",
+      "Python",
+      "React"
+    ],
+    "technical": [
+      "React",
+      "NodeJS",
+      "Typescript",
+      "Python",
+      "ELK",
+      "Grafana",
+      ".NET",
+      "Maven",
+      "Sonarqube",
+      "SQL",
+      "Liquibase",
+      "Figma",
+      "Jira",
+      "Confluence",
+      "Squash",
+      "Github",
+      "Gitlab",
+      "Gitkraken",
+      "ArgoCD",
+      "Jenkins",
+      "Bash"
+    ],
+    "soft": [
+      "Meeting facilitation (demos, retrospective...)",
+      "Proactive mindset",
+      "Estimation and client communication"
+    ],
+    "concepts": [
+      "AGILE & Scrum",
+      "Kanban",
+      "UML",
+      "Gantt"
+    ],
+    "softwares": [
+      "VSCode",
+      "IntelliJ / Eclipse",
+      "Microsoft Office",
+      "Postman",
+      "Copilot"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Fluent",
+        "communication": "Advanced",
+        "understanding": "Advanced",
+        "certification": "TOEIC 900 pts"
+      },
+      {
+        "name": "Spanish",
+        "level": "Basics",
+        "communication": "Intermediate",
+        "understanding": "Intermediate"
+      }
+    ]
+  }
+}
+
+
