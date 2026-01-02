@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaHandshake, FaLightbulb, FaGlobe } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import './SoftSkills.css';
@@ -14,6 +15,7 @@ const getLanguageFlag = (languageName) => {
 };
 
 const SoftSkills = ({ skills }) => {
+  const { t } = useTranslation();
   if (!skills) return null;
 
   return (
@@ -23,12 +25,28 @@ const SoftSkills = ({ skills }) => {
           <div className="skills-category-card">
             <h3 className="category-title">
               <FaHandshake className="category-icon" />
-              Social skills
+              {t('skills.socialSkills')}
             </h3>
             <div className="skills-tags">
-              {skills.soft.map((skill, index) => (
-                <span key={index} className="skill-tag">{skill}</span>
-              ))}
+              {skills.soft.map((skill, index) => {
+                // Mapper les compétences aux clés de traduction
+                const skillKeyMap = {
+                  "Meeting facilitation (demos, retrospective...)": "meetingFacilitation",
+                  "Proactive mindset": "proactiveMindset",
+                  "Estimation and client communication": "estimationAndClientCommunication",
+                  "Technical communication mastery": "technicalCommunicationMastery",
+                  "Adaptation to project methodologies": "adaptationToProjectMethodologies",
+                  "Knowledge of business processes (IT services company experience)": "knowledgeOfBusinessProcesses",
+                  "Ease in facilitating presentations (daily, refinement...)": "easeInFacilitatingPresentations",
+                  "Pair programming": "pairProgramming"
+                };
+                const translationKey = skillKeyMap[skill] || skill;
+                return (
+                  <span key={index} className="skill-tag">
+                    {t(`skills.softSkills.${translationKey}`, { defaultValue: skill })}
+                  </span>
+                );
+              })}
             </div>
           </div>
         )}
@@ -37,7 +55,7 @@ const SoftSkills = ({ skills }) => {
           <div className="skills-category-card">
             <h3 className="category-title">
               <FaLightbulb className="category-icon" />
-              Concepts
+              {t('skills.concepts')}
             </h3>
             <div className="skills-tags">
               {skills.concepts.map((concept, index) => (
@@ -51,7 +69,7 @@ const SoftSkills = ({ skills }) => {
           <>
             <h3 className="category-title languages-title">
               <FaGlobe className="category-icon" />
-              Languages
+              {t('skills.languages')}
             </h3>
             <div className="languages-grid languages-full-width">
               {skills.languages.map((lang, index) => {
@@ -71,16 +89,16 @@ const SoftSkills = ({ skills }) => {
                         />
                       )}
                       <span className="language-name">{lang.name}</span>
-                      <span className="language-level"> - {lang.level}</span>
+                      <span className="language-level"> - {t(`skills.levels.${lang.level}`, { defaultValue: lang.level })}</span>
                     </div>
                     {lang.communication && (
                       <div className="language-detail">
-                        <span className="language-label-bold">Communication:</span> {lang.communication}
+                        <span className="language-label-bold">{t('skills.communication')}:</span> {t(`skills.levels.${lang.communication}`, { defaultValue: lang.communication })}
                       </div>
                     )}
                     {lang.understanding && (
                       <div className="language-detail">
-                        <span className="language-label-bold">Understanding:</span> {lang.understanding}
+                        <span className="language-label-bold">{t('skills.understanding')}:</span> {t(`skills.levels.${lang.understanding}`, { defaultValue: lang.understanding })}
                       </div>
                     )}
                     {lang.certification && (

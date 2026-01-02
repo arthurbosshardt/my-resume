@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaSortAlphaDown, FaSortAmountDown, FaCode, FaLaptop, FaProjectDiagram, FaCheckCircle, FaRocket, FaBrain } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = ({ skills }) => {
+  const { t } = useTranslation();
   const [sortOrders, setSortOrders] = useState({});
 
   const toggleSort = (category) => {
@@ -26,17 +28,17 @@ const Skills = ({ skills }) => {
       return 1; // Opacité complète pour le tri alphabétique
     }
     
-    // Pour Languages & Frameworks, le dégradé ne s'applique qu'aux 10 derniers
-    if (category === 'languagesFrameworks' && total > 10) {
-      const startGradientIndex = total - 10;
+    // Pour Languages & Frameworks, le dégradé ne s'applique qu'aux 15 derniers
+    if (category === 'languagesFrameworks' && total > 20) {
+      const startGradientIndex = total - 20;
       if (index < startGradientIndex) {
-        return 1.0; // Opacité complète pour les éléments avant les 10 derniers
+        return 1.0; // Opacité complète pour les éléments avant les 15 derniers
       }
-      // Dégradé pour les 10 derniers
+      // Dégradé pour les 15 derniers
       const relativeIndex = index - startGradientIndex;
       const minOpacity = 0.75;
       const maxOpacity = 1.0;
-      const opacityStep = (maxOpacity - minOpacity) / Math.max(1, 9); // 9 car on a 10 éléments (0-9)
+      const opacityStep = (maxOpacity - minOpacity) / Math.max(1, 14); // 14 car on a 15 éléments (0-14)
       return maxOpacity - (relativeIndex * opacityStep);
     }
     
@@ -67,7 +69,7 @@ const Skills = ({ skills }) => {
                   <div className="subcategory-header">
                     <h4 className="subcategory-title">
                       <FaCode className="subcategory-icon" />
-                      Languages & Frameworks
+                      {t('skills.languagesFrameworks')}
                       <button 
                         className="sort-button"
                         onClick={() => toggleSort('languagesFrameworks')}
@@ -79,7 +81,7 @@ const Skills = ({ skills }) => {
                         )}
                       </button>
                       <span className="sort-tooltip">
-                        ({sortOrders['languagesFrameworks'] === 'alphabetical' ? 'Alphabetical' : 'By mastery'})
+                        ({sortOrders['languagesFrameworks'] === 'alphabetical' ? t('skills.alphabetical') : t('skills.byMastery')})
                       </span>
                     </h4>
                   </div>
@@ -105,7 +107,7 @@ const Skills = ({ skills }) => {
                   <div className="subcategory-header">
                     <h4 className="subcategory-title">
                       <FaRocket className="subcategory-icon" />
-                      Continuous integration
+                      {t('skills.continuousIntegration')}
                     </h4>
                   </div>
                   <div className="skills-tags">
@@ -129,31 +131,7 @@ const Skills = ({ skills }) => {
                   <div className="subcategory-header">
                     <h4 className="subcategory-title">
                       <FaLaptop className="subcategory-icon" />
-                      Softwares
-                    </h4>
-                  </div>
-                  <div className="skills-tags">
-                    {sortedSkills.map((skill, index) => (
-                      <span 
-                        key={index} 
-                        className="skill-tag"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-              })()}
-
-              {skills.technical.projectTools && Array.isArray(skills.technical.projectTools) && skills.technical.projectTools.length > 0 && (() => {
-                const sortedSkills = sortAlphabetically(skills.technical.projectTools);
-                return (
-                <div className="technical-subcategory">
-                  <div className="subcategory-header">
-                    <h4 className="subcategory-title">
-                      <FaProjectDiagram className="subcategory-icon" />
-                      Project tools
+                      {t('skills.softwares')}
                     </h4>
                   </div>
                   <div className="skills-tags">
@@ -177,7 +155,31 @@ const Skills = ({ skills }) => {
                   <div className="subcategory-header">
                     <h4 className="subcategory-title">
                       <FaCheckCircle className="subcategory-icon" />
-                      Testing
+                      {t('skills.testing')}
+                    </h4>
+                  </div>
+                  <div className="skills-tags">
+                    {sortedSkills.map((skill, index) => (
+                      <span 
+                        key={index} 
+                        className="skill-tag"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+              })()}
+
+              {skills.technical.projectTools && Array.isArray(skills.technical.projectTools) && skills.technical.projectTools.length > 0 && (() => {
+                const sortedSkills = sortAlphabetically(skills.technical.projectTools);
+                return (
+                <div className="technical-subcategory">
+                  <div className="subcategory-header">
+                    <h4 className="subcategory-title">
+                      <FaProjectDiagram className="subcategory-icon" />
+                      {t('skills.projectTools')}
                     </h4>
                   </div>
                   <div className="skills-tags">
@@ -201,7 +203,7 @@ const Skills = ({ skills }) => {
                   <div className="subcategory-header">
                     <h4 className="subcategory-title">
                       <FaBrain className="subcategory-icon" />
-                      AI
+                      {t('skills.ai')}
                     </h4>
                   </div>
                   <div className="skills-tags">

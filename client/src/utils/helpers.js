@@ -20,3 +20,5 @@ export const formatDescription = (text) => {
   return text.replace(/\. ([A-Z])/g, '.<br />$1');
 };
 
+
+

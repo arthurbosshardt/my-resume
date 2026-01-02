@@ -1,24 +1,33 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaGraduationCap, FaMapMarkerAlt } from 'react-icons/fa';
 import { sortByPeriod, formatDescription } from '../utils/helpers';
 import './Education.css';
 
 const Education = ({ education }) => {
+  const { t } = useTranslation();
   if (!education || education.length === 0) return null;
 
   const sortedEducation = sortByPeriod(education);
 
-  const parseEducationTitle = (title) => {
+  const getTranslationKey = (period) => {
+    return period.replace(/\s/g, '').replace(/-/g, '_');
+  };
+
+  const parseEducationTitle = (title, period) => {
+    const periodKey = getTranslationKey(period);
+    const translatedTitle = t(`education.${periodKey}.title`, { defaultValue: title });
+    
     // Extraire la localisation si elle est présente (format: "... - Nantes")
-    const locationMatch = title.match(/\s-\s(.+)$/);
+    const locationMatch = translatedTitle.match(/\s-\s(.+)$/);
     if (locationMatch) {
       return {
-        schoolName: title.replace(/\s-\s.+$/, ''),
+        schoolName: translatedTitle.replace(/\s-\s.+$/, ''),
         location: locationMatch[1]
       };
     }
     return {
-      schoolName: title,
+      schoolName: translatedTitle,
       location: null
     };
   };
@@ -27,9 +36,15 @@ const Education = ({ education }) => {
     <section className="education-section">
       <div className="education-list">
         {sortedEducation.map((edu, index) => {
-          const { schoolName, location: titleLocation } = parseEducationTitle(edu.title);
+          const { schoolName, location: titleLocation } = parseEducationTitle(edu.title, edu.period);
           // Utiliser edu.location si disponible, sinon utiliser la localisation extraite du titre
-          const location = edu.location || titleLocation;
+          let location = edu.location || titleLocation;
+          // Traduire "Remote" en "Distanciel" en français
+          if (location === "Remote") {
+            location = t('common.remote');
+          }
+          const periodKey = getTranslationKey(edu.period);
+          const description = t(`education.${periodKey}.description`, { defaultValue: edu.description });
           return (
             <div key={index} className="education-item">
               <div className="education-period">{edu.period}</div>
@@ -48,7 +63,7 @@ const Education = ({ education }) => {
                 </div>
                 <p 
                   className="education-description"
-                  dangerouslySetInnerHTML={{ __html: formatDescription(edu.description) }}
+                  dangerouslySetInnerHTML={{ __html: formatDescription(description) }}
                 />
               </div>
             </div>

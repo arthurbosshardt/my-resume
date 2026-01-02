@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaHome, FaBirthdayCake } from 'react-icons/fa';
 import './Header.css';
 
 const Header = ({ personal }) => {
+  const { t } = useTranslation();
   const [imageError, setImageError] = useState(false);
   
   if (!personal) return null;
@@ -14,14 +16,14 @@ const Header = ({ personal }) => {
       <div className="header-content">
         <div className="header-info">
           <h1 className="name">{personal.name}</h1>
-          <p className="role">{personal.role}</p>
+          <p className="role">{t('header.role')}</p>
           <p className="age">
             <FaBirthdayCake className="age-icon" />
-            {personal.age} years old
+            {personal.age} {t('header.yearsOld')}
           </p>
           <p className="location">
             <FaHome className="location-icon" />
-            Vannes 56000 - France
+            {t('header.location')}
           </p>
         </div>
         <div className="header-center">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import './App.css';
 import Header from './components/Header';
@@ -9,10 +10,15 @@ import Skills from './components/Skills';
 import SoftSkills from './components/SoftSkills';
 
 function App() {
+  const { i18n } = useTranslation();
   const [resumeData, setResumeData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentSection, setCurrentSection] = useState('experience');
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   useEffect(() => {
     const fetchResume = async () => {
@@ -53,7 +59,7 @@ function App() {
   const renderSection = () => {
     switch (currentSection) {
       case 'experience':
-        return <Experience experience={resumeData.experience} />;
+        return <Experience experience={resumeData.experience} onSectionChange={setCurrentSection} />;
       case 'education':
         return <Education education={resumeData.education} />;
       case 'hardSkills':
@@ -61,7 +67,7 @@ function App() {
       case 'softSkills':
         return <SoftSkills skills={resumeData.skills} />;
       default:
-        return <Experience experience={resumeData.experience} />;
+        return <Experience experience={resumeData.experience} onSectionChange={setCurrentSection} />;
     }
   };
 
@@ -71,7 +77,9 @@ function App() {
         <Header personal={resumeData.personal} />
         <Breadcrumb 
           currentSection={currentSection} 
-          onSectionChange={setCurrentSection} 
+          onSectionChange={setCurrentSection}
+          currentLanguage={i18n.language}
+          onChangeLanguage={changeLanguage}
         />
         <div className="resume-content">
           <div className="main-content">
