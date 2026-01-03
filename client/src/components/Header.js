@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaHome, FaBirthdayCake } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaBirthdayCake } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import './Header.css';
 
@@ -11,6 +11,14 @@ const Header = ({ personal, currentLanguage, onChangeLanguage }) => {
   if (!personal) return null;
 
   const imagePath = `${process.env.PUBLIC_URL || ''}/images/profile.jpg`;
+  
+  // Formater le téléphone selon la langue
+  const formatPhone = (phone) => {
+    if (currentLanguage === 'fr' && phone.startsWith('+33 6')) {
+      return phone.replace('+33 6', '06');
+    }
+    return phone;
+  };
 
   return (
     <div className="header">
@@ -45,7 +53,7 @@ const Header = ({ personal, currentLanguage, onChangeLanguage }) => {
           </p>
           <a href={`tel:${personal.contact.phone}`} className="contact-link">
             <FaPhone className="phone-icon" />
-            {personal.contact.phone}
+            {formatPhone(personal.contact.phone)}
           </a>
           <div className="header-language-toggle">
             <button

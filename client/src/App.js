@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import SoftSkills from './components/SoftSkills';
+import PDFDownloadButton from './components/PDFDownloadButton';
 
 function App() {
   const { i18n } = useTranslation();
@@ -108,6 +109,10 @@ function App() {
           )}
         </div>
       </div>
+      <PDFDownloadButton 
+        resumeData={resumeData} 
+        currentLanguage={i18n.language}
+      />
     </div>
   );
 }

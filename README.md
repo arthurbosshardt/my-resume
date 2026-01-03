@@ -1,6 +1,6 @@
 # Resume React Node.js
 
-Site web pour exposer le CV d'Arthur BOSSHARDT - Full-Stack Developer
+Site web pour exposer le CV d'Arthur BOSSHARDT - Full-stack developer
 
 ## Prérequis
 
@@ -45,7 +45,7 @@ L'application React démarre sur le port 3000 par défaut.
 
 - `GET /api/resume` - Récupère toutes les données du CV
 - `GET /api/resume/personal` - Informations personnelles
-- `GET /api/resume/experience` - Expérience professionnelle
+- `GET /api/resume/experience` - Expérience
 - `GET /api/resume/education` - Formation
 - `GET /api/resume/skills` - Compétences
 

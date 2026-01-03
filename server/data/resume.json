@@ -3,7 +3,7 @@
     "name": "Arthur BOSSHARDT",
     "age": 27,
     "location": "France",
-    "role": "Full-Stack Developer",
+    "role": "Full-stack developer",
     "contact": {
       "phone": "+33 6 37 60 12 77",
       "email": "arthur.bosshardt@gmail.com"
@@ -12,7 +12,7 @@
   "experience": [
     {
       "period": "2025 - 2026",
-      "title": "Full-Stack Developer",
+      "title": "Full-stack developer",
       "company": "Darwin",
       "location": "Annecy",
       "current": true,
@@ -26,7 +26,7 @@
     },
     {
       "period": "2023 - 2025",
-      "title": "Full-Stack Developer",
+      "title": "Full-stack developer",
       "company": "Qim Info",
       "location": "Annecy",
       "projects": [
@@ -39,7 +39,7 @@
     },
     {
       "period": "2021 - 2023",
-      "title": "Full-Stack Developer",
+      "title": "Full-stack developer",
       "company": "Capgemini",
       "location": "Nantes",
       "projects": [
@@ -82,7 +82,8 @@
       "period": "2026",
       "title": "React framework courses",
       "location": "Remote",
-      "description": "Courses about React framework as IT web and mobile developer."
+      "description": "Courses about React framework as IT web and mobile developer.",
+      "upcoming": true
     },
     {
       "period": "2024",

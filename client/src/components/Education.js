@@ -50,6 +50,9 @@ const Education = ({ education }) => {
               <div className="education-period">{edu.period}</div>
               <div className="education-content">
                 <div className="education-title-row">
+                  {edu.upcoming && (
+                    <span className="upcoming-badge">{t('education.upcoming')}</span>
+                  )}
                   <div className="education-school-info">
                     <FaGraduationCap className="school-icon" />
                     <h3 className="education-title">{schoolName}</h3>

@@ -2,13 +2,13 @@
   "header": {
     "yearsOld": "ans",
     "location": "Vannes 56000 - France",
-    "role": "Développeur Full-Stack"
+    "role": "Développeur full-stack"
   },
   "breadcrumb": {
-    "professionalExperience": "Expérience Professionnelle",
+    "professionalExperience": "Expérience",
     "education": "Formation",
-    "hardSkills": "Compétences Techniques",
-    "softSkills": "Compétences Humaines"
+    "hardSkills": "Technique",
+    "softSkills": "Transverse"
   },
   "skills": {
     "languagesFrameworks": "Langages & Frameworks",
@@ -49,15 +49,15 @@
   "experience": {
     "currentPosition": "Poste actuel",
     "2025_2026": {
-      "title": "Développeur Full-Stack",
+      "title": "Développeur full-stack",
       "description": "Projet de gestion des comptes-rendus pour le commercial du Crédit Agricole lui permettant de gérer ses rapports d'activité commerciale également pour capitaliser sur son démarchage. Fonctionnement par unité applicative, très sectorisé. Ajout de nombreuses fonctionnalités pour faciliter la vie du commercial. Front end avec technologies natives et back end Java Spring Boot. Mise en place de dashboard ELK pour réaliser des indicateurs métiers. Projet Agile de 4 à 6 développeurs avec 2 business analysts et un product owner."
     },
     "2023_2025": {
-      "title": "Développeur Full-Stack",
+      "title": "Développeur full-stack",
       "description": "Contexte métier autour de la bourse et de la gestion de son portefeuille de titres. Projet existant avec Java JEE et Spring Boot ainsi que projet de refonte ergonomique en Angular 18 et application mobile. Contexte métier très dense mais très intéressant avec fonctionnement par tribu, les projets sont en cycle en V mais une transition vers l'Agile est souhaitée et aujourd'hui effective."
     },
     "2021_2023": {
-      "title": "Développeur Full-Stack",
+      "title": "Développeur full-stack",
       "description": "Maintenance, évolution et corrective sur le formulaire de saisie des incidents SNCF. Application avec de fortes problématiques d'ergonomie car les utilisateurs sont stressés, travaillent de nuit également et ne sont pas informaticiens. L'interface permet la saisie audio ou textuelle des incidents sur les lignes afin d'afficher en gare, à bord des trains ou sur les réseaux les interruptions ou ralentissements à venir. Refonte complète sur une application one page. Étude de faisabilité pour passer de AngularJS à Angular 16. Projet en agile avec 2-6 développeurs avec Scrum Master, Product Owner et Product Manager."
     },
     "2018_2021": {
@@ -70,6 +70,7 @@
     }
   },
   "education": {
+    "upcoming": "À venir",
     "2026": {
       "title": "Formation React",
       "description": "Formation sur le framework React en tant que développeur web et mobile IT."
@@ -94,6 +95,9 @@
       "title": "DUT Informatique",
       "description": "Modules informatiques (développement web, bases de données, réseaux). Formation générale (anglais, droit, comptabilité, gestion de projet)."
     }
+  },
+  "pdf": {
+    "download": "Télécharger le PDF en français"
   }
 }
 

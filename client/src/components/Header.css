@@ -289,7 +289,7 @@
   
   .profile-photo {
     width: 220px;
-    height: 220px;
+    height: 230px;
     border: 8px solid rgba(255, 255, 255, 0.3);
   }
   
@@ -331,7 +331,7 @@
   
   .profile-photo {
     width: 200px;
-    height: 200px;
+    height: 210px;
     border: 7px solid rgba(255, 255, 255, 0.3);
   }
 }

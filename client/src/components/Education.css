@@ -43,6 +43,18 @@
   margin-bottom: 8px;
 }
 
+.upcoming-badge {
+  color: #cc553e;
+  border: 2px solid #cc553e;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
 .education-school-info {
   display: flex;
   align-items: center;
