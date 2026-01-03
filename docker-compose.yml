@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # Ton API Node.js
+  backend-service:
+    build: ./server
+    # On utilise 8080 pour éviter les conflits avec le port 5000 du Synology
+    ports:
+      - "8080:5000"
+    restart: always
+
+  # Ton interface React
+  frontend-service:
+    build: ./client
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - backend-service

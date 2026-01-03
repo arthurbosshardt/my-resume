@@ -31,6 +31,4 @@ lerna-debug.log*
 .DS_Store
 Thumbs.db
 
-server/package.json
-
-
+client/package.json
