@@ -33,6 +33,7 @@
 
 .education-content {
   flex: 1;
+  width: 100%;
 }
 
 .education-title-row {
@@ -53,6 +54,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   white-space: nowrap;
+  text-align: center;
 }
 
 .education-school-info {
@@ -182,6 +184,20 @@
   }
 
   .education-period {
+    min-width: auto;
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+  
+  .education-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .education-period,
+  .upcoming-badge {
     min-width: auto;
     width: 100%;
     font-size: 0.85rem;

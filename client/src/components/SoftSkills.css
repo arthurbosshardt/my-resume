@@ -38,7 +38,7 @@
 }
 
 .category-title {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #cc553e;
   margin-bottom: 8px;
@@ -84,7 +84,7 @@
   }
   
   .category-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     margin-bottom: 10px;
   }
   
@@ -102,24 +102,24 @@
   }
   
   .language-name-level {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 8px;
   }
   
   .language-name {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
   
   .language-level {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   
   .language-detail {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
   
   .language-certification {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -140,7 +140,7 @@
   }
   
   .category-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 9px;
   }
   
@@ -158,24 +158,24 @@
   }
   
   .language-name-level {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     margin-bottom: 7px;
   }
   
   .language-name {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
   
   .language-level {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   
   .language-detail {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   
   .language-certification {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 
@@ -210,7 +210,7 @@
   }
   
   .category-title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-bottom: 6px;
   }
   
@@ -229,24 +229,24 @@
   }
   
   .language-name-level {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-bottom: 5px;
   }
   
   .language-name {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   
   .language-level {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
   
   .language-detail {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
   
   .language-certification {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -255,23 +255,23 @@
 .language-name-level {
   font-weight: 600;
   margin-bottom: 6px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .language-name {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 
 .language-level {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   opacity: 0.9;
 }
 
 .language-detail {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   opacity: 0.9;
   margin-top: 4px;
   color: #555;
@@ -284,7 +284,7 @@
 }
 
 .language-certification {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-top: 4px;
   color: #555;

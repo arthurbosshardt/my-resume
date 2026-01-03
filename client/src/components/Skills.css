@@ -37,7 +37,7 @@
   }
   
   .subcategory-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
   
   .subcategory-icon {
@@ -75,7 +75,7 @@
   }
   
   .subcategory-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
   
   .subcategory-icon {
@@ -124,7 +124,7 @@
   }
   
   .subcategory-title {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   
   .subcategory-icon {
@@ -168,7 +168,7 @@
 }
 
 .subcategory-title {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #cc553e;
   text-transform: uppercase;
