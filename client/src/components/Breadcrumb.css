@@ -87,9 +87,60 @@
   line-height: 1;
 }
 
+/* Responsive: 4K (2561px+) */
+@media (min-width: 2561px) {
+  .breadcrumb {
+    padding: 15px 60px;
+    min-height: 70px;
+  }
+  
+  .breadcrumb-item {
+    font-size: 1rem;
+    padding: 12px 22px;
+  }
+  
+  .breadcrumb-icon {
+    font-size: 1.3rem;
+  }
+  
+  .breadcrumb-separator {
+    font-size: 1.6rem;
+  }
+}
+
+/* Responsive: 2K (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .breadcrumb {
+    padding: 14px 50px;
+    min-height: 65px;
+  }
+  
+  .breadcrumb-item {
+    font-size: 0.95rem;
+    padding: 11px 20px;
+  }
+  
+  .breadcrumb-icon {
+    font-size: 1.2rem;
+  }
+  
+  .breadcrumb-separator {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive: PC 1920x1080 (769px - 1920px) */
+@media (min-width: 769px) and (max-width: 1920px) {
+  .breadcrumb {
+    padding: 12px 40px;
+  }
+}
+
+/* Responsive: Mobile (< 768px) */
 @media (max-width: 768px) {
   .breadcrumb {
     padding: 10px 15px;
+    min-height: 55px;
   }
 
   .breadcrumb-container {
@@ -99,6 +150,10 @@
   .breadcrumb-item {
     font-size: 0.75rem;
     padding: 6px 8px;
+  }
+  
+  .breadcrumb-icon {
+    font-size: 0.9rem;
   }
 
   .breadcrumb-separator {

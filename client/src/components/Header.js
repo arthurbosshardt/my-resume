@@ -15,17 +15,38 @@ const Header = ({ personal, currentLanguage, onChangeLanguage }) => {
   return (
     <div className="header">
       <div className="header-content">
-        <div className="header-info">
+        <div className="header-grid">
           <h1 className="name">{personal.name}</h1>
+          <a 
+            href="https://github.com/arthurbosshardt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <FaGithub className="social-icon" />
+            @arthurbosshardt
+          </a>
           <p className="role">{t('header.role')}</p>
-          <p className="age">
+          <a 
+            href="https://www.linkedin.com/in/arthur-bosshardt-196900156/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <FaLinkedin className="social-icon" />
+            @arthur_bosshardt
+          </a>
+          <p className="age-location">
             <FaBirthdayCake className="age-icon" />
             {personal.age} {t('header.yearsOld')}
+            <span className="separator"> • </span>
+            Vannes 56000{' '}
+            <ReactCountryFlag countryCode="FR" svg style={{ width: '1.2em', height: '1.2em' }} />
           </p>
-          <p className="location">
-            <FaHome className="location-icon" />
-            {t('header.location')}
-          </p>
+          <a href={`tel:${personal.contact.phone}`} className="contact-link">
+            <FaPhone className="phone-icon" />
+            {personal.contact.phone}
+          </a>
           <div className="header-language-toggle">
             <button
               className={`header-language-toggle-btn ${currentLanguage === 'en' ? 'active' : ''}`}
@@ -42,36 +63,10 @@ const Header = ({ personal, currentLanguage, onChangeLanguage }) => {
               <ReactCountryFlag countryCode="FR" svg style={{ width: '1.2em', height: '1.2em' }} />
             </button>
           </div>
-        </div>
-        <div className="header-center">
-          <div className="header-links">
-            <a 
-              href="https://github.com/arthurbosshardt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaGithub className="social-icon" />
-              @arthurbosshardt
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/arthur-bosshardt-196900156/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaLinkedin className="social-icon" />
-              @arthur_bosshardt
-            </a>
-            <a href={`tel:${personal.contact.phone}`} className="contact-link">
-              <FaPhone className="phone-icon" />
-              {personal.contact.phone}
-            </a>
-            <a href={`mailto:${personal.contact.email}`} className="contact-link">
-              <FaEnvelope className="contact-icon" />
-              {personal.contact.email}
-            </a>
-          </div>
+          <a href={`mailto:${personal.contact.email}`} className="contact-link">
+            <FaEnvelope className="contact-icon" />
+            {personal.contact.email}
+          </a>
         </div>
         <div className="header-right">
           <div className="header-image">

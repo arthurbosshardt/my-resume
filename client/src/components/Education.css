@@ -86,16 +86,110 @@
   word-wrap: break-word;
 }
 
+/* Responsive: 4K (2561px+) */
+@media (min-width: 2561px) {
+  .education-list {
+    gap: 20px;
+    padding-bottom: 25px;
+  }
+  
+  .education-item {
+    gap: 25px;
+  }
+  
+  .education-title {
+    font-size: 1.4rem;
+  }
+  
+  .education-period {
+    font-size: 1rem;
+    padding: 8px 16px;
+    min-width: 140px;
+  }
+  
+  .education-location-info {
+    font-size: 1.05rem;
+  }
+  
+  .education-description {
+    font-size: 1.05rem;
+  }
+  
+  .education-item {
+    padding: 25px;
+  }
+  
+  .school-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive: 2K (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .education-list {
+    gap: 18px;
+    padding-bottom: 22px;
+  }
+  
+  .education-item {
+    gap: 22px;
+  }
+  
+  .education-title {
+    font-size: 1.3rem;
+  }
+  
+  .education-period {
+    font-size: 0.95rem;
+    padding: 7px 15px;
+    min-width: 130px;
+  }
+  
+  .education-location-info {
+    font-size: 1rem;
+  }
+  
+  .education-description {
+    font-size: 1rem;
+  }
+  
+  .education-item {
+    padding: 22px;
+  }
+  
+  .school-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive: Mobile (< 768px) */
 @media (max-width: 768px) {
   .education-item {
     flex-direction: column;
     gap: 15px;
   }
 
-  .education-period,
-  .experience-period {
+  .education-period {
     min-width: auto;
     width: 100%;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+  
+  .education-title {
+    font-size: 1.1rem;
+  }
+  
+  .education-location-info {
+    font-size: 0.9rem;
+  }
+  
+  .education-description {
+    font-size: 0.9rem;
+  }
+  
+  .school-icon {
+    font-size: 1rem;
   }
 }
 
