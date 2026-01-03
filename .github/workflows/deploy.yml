@@ -31,7 +31,7 @@ jobs:
         with:
           context: ./client
           push: true
-          platforms: linux/amd64
+          platforms: linux/arm64
           tags: ghcr.io/arthurbosshardt/cv-frontend:latest
 
       - name: Build and push Backend
@@ -39,5 +39,5 @@ jobs:
         with:
           context: ./server
           push: true
-          platforms: linux/amd64
+          platforms: linux/arm64
           tags: ghcr.io/arthurbosshardt/cv-backend:latest
