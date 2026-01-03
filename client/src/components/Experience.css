@@ -43,8 +43,7 @@
 }
 
 .current-badge {
-  background: #cc553e;
-  color: white;
+  color: #cc553e;
   border: 2px solid #cc553e;
   padding: 6px 14px;
   border-radius: 8px;
@@ -54,6 +53,7 @@
   letter-spacing: 0.5px;
   white-space: nowrap;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .experience-separator {
@@ -207,6 +207,7 @@
   .experience-period,
   .current-badge {
     min-width: auto;
+    width: 100%;
     font-size: 0.85rem;
     padding: 5px 12px;
   }
