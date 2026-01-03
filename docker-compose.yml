@@ -1,19 +1,27 @@
 version: '3.8'
 
 services:
-  # Ton API Node.js
+  # TON FRONTEND
+  frontend:
+    image: ghcr.io/arthurbosshardt/cv-frontend:latest
+    ports:
+      - "3000:3000"
+    restart: always
+    # On garde le lien avec le backend
+
+  # TON BACKEND
   backend-service:
-    build: ./server
-    # On utilise 8080 pour éviter les conflits avec le port 5000 du Synology
+    image: ghcr.io/arthurbosshardt/cv-backend:latest
     ports:
       - "8080:5000"
     restart: always
 
-  # Ton interface React
-  frontend-service:
-    build: ./client
-    ports:
-      - "3000:3000"
+  # TON AUTOMATISATION (Le nouveau bloc)
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json:ro
+    command: --interval 300 --cleanup
     restart: always
-    depends_on:
-      - backend-service
