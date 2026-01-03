@@ -16,10 +16,11 @@ services:
       - "8080:5000"
     restart: always
 
-  # TON AUTOMATISATION (Le nouveau bloc)
-  watchtower:
-    image: containrrr/watchtower
+watchtower:
+    image: containrrr/watchtower:latest
     container_name: watchtower
+    # Force Docker à utiliser l'architecture du système hôte
+    platform: linux/arm64 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /root/.docker/config.json:/config.json:ro
