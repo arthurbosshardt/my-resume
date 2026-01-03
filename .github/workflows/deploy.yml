@@ -1,0 +1,38 @@
+name: Build and Push to GHCR
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./client
+          push: true
+          tags: ghcr.io/arthurbosshardt/cv-frontend:latest
+
+      - name: Build and push Backend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./server
+          push: true
+          tags: ghcr.io/arthurbosshardt/cv-backend:latest
