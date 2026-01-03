@@ -346,12 +346,12 @@
 /* Responsive: Mobile (< 768px) */
 @media (max-width: 768px) {
   .header {
-    padding: 10px 12px;
+    padding: 6px 12px;
     max-height: 15vh;
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     box-sizing: border-box;
   }
 
@@ -366,7 +366,7 @@
   .header-grid {
     width: 100%;
     max-width: 100%;
-    gap: 8px;
+    gap: 4px;
     box-sizing: border-box;
     overflow: hidden;
     grid-template-columns: 1fr 1fr;
@@ -455,50 +455,53 @@
   .header-grid > a[href*="linkedin"],
   .header-grid > a[href^="tel:"],
   .header-grid > a[href^="mailto:"] {
-    height: 24px;
-    min-height: 24px;
+    height: 22px;
+    min-height: 22px;
   }
 
   /* Ligne 1 : Nom ↔ GitHub */
   .header-grid > .name {
     height: calc(1.1rem * 1);
+    line-height: 1.1rem;
   }
   
   /* Ligne 2 : Poste ↔ LinkedIn */
   .header-grid > .role {
     height: calc(0.75rem * 1);
+    line-height: 0.75rem;
   }
 
   /* Ligne 3 : Âge+Localisation ↔ Téléphone */
   .header-grid > .age-location {
     height: calc(0.65rem * 1);
+    line-height: 0.65rem;
   }
 
   /* Ligne 4 : Switch ↔ Mail */
   .header-grid > .header-language-toggle {
-    height: 24px;
-    min-height: 24px;
+    height: 22px;
+    min-height: 22px;
     flex-shrink: 0;
-    padding: 2px;
+    padding: 1px;
   }
   
   .header-language-toggle-btn {
-    font-size: 0.65rem;
-    padding: 2px 4px;
-    height: 20px;
+    font-size: 0.6rem;
+    padding: 1px 3px;
+    height: 18px;
   }
   
   .social-link,
   .contact-link {
-    font-size: 0.65rem;
-    padding: 2px 6px;
+    font-size: 0.6rem;
+    padding: 1px 6px;
     justify-content: flex-end;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    min-height: 24px;
-    height: 24px;
+    min-height: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
   }
@@ -515,8 +518,55 @@
     min-width: 0;
   }
   
+  /* Pour les écrans moyens (comme 412px) - ajustement spécifique */
+  @media (min-width: 376px) and (max-width: 450px) {
+    .header {
+      padding: 5px 12px;
+      max-height: 16vh;
+    }
+    
+    .header-grid {
+      gap: 3px;
+    }
+    
+    .header-grid > a[href*="github"],
+    .header-grid > a[href*="linkedin"],
+    .header-grid > a[href^="tel:"],
+    .header-grid > a[href^="mailto:"] {
+      height: 21px;
+      min-height: 21px;
+    }
+    
+    .header-grid > .header-language-toggle {
+      height: 21px;
+      min-height: 21px;
+    }
+    
+    .social-link,
+    .contact-link {
+      font-size: 0.58rem;
+      padding: 1px 5px;
+      min-height: 21px;
+      height: 21px;
+    }
+    
+    .header-language-toggle-btn {
+      font-size: 0.58rem;
+      padding: 1px 3px;
+      height: 17px;
+    }
+  }
+  
   /* Pour les très petits écrans */
   @media (max-width: 375px) {
+    .header {
+      padding: 4px 12px;
+    }
+    
+    .header-grid {
+      gap: 3px;
+    }
+    
     .name {
       font-size: 1rem;
     }
@@ -531,23 +581,29 @@
     
     .social-link,
     .contact-link {
-      font-size: 0.6rem;
-      padding: 2px 5px;
-      min-height: 22px;
-      height: 22px;
+      font-size: 0.55rem;
+      padding: 1px 4px;
+      min-height: 20px;
+      height: 20px;
     }
     
     .header-grid > a[href*="github"],
     .header-grid > a[href*="linkedin"],
     .header-grid > a[href^="tel:"],
     .header-grid > a[href^="mailto:"] {
-      height: 22px;
-      min-height: 22px;
+      height: 20px;
+      min-height: 20px;
     }
     
     .header-grid > .header-language-toggle {
-      height: 22px;
-      min-height: 22px;
+      height: 20px;
+      min-height: 20px;
+    }
+    
+    .header-language-toggle-btn {
+      font-size: 0.55rem;
+      padding: 1px 2px;
+      height: 16px;
     }
     
     .header-grid {
