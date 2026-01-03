@@ -110,7 +110,6 @@ function App() {
         </div>
       </div>
       <PDFDownloadButton 
-        resumeData={resumeData} 
         currentLanguage={i18n.language}
       />
     </div>
