@@ -5,6 +5,9 @@ services:
     image: ghcr.io/arthurbosshardt/cv-frontend:latest
     ports:
       - "3000:3000"
+    environment:
+      - WDS_SOCKET_PORT=0
+      - DANGEROUSLY_DISABLE_HOST_CHECK=true
     restart: always
 
   backend-service:
