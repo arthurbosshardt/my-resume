@@ -71,6 +71,8 @@ function App() {
     }
   };
 
+  const isSoftSkillsSection = currentSection === 'softSkills';
+
   return (
     <div className="app">
       <div className="resume-container">
@@ -84,9 +86,13 @@ function App() {
           onSectionChange={setCurrentSection}
         />
         <div className="resume-content">
-          <div className="main-content">
-            {renderSection()}
-          </div>
+          {isSoftSkillsSection ? (
+            renderSection()
+          ) : (
+            <div className="main-content">
+              {renderSection()}
+            </div>
+          )}
         </div>
       </div>
     </div>

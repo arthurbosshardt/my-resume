@@ -1,5 +1,8 @@
 .soft-skills-section {
   height: 100%;
+  padding: 30px 40px;
+  background: white;
+  overflow: hidden;
 }
 
 .soft-skills-grid {
@@ -65,6 +68,12 @@
 @media (max-width: 768px) {
   .languages-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 968px) {
+  .soft-skills-section {
+    padding: 20px;
   }
 }
 
