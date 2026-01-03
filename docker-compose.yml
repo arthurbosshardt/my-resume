@@ -16,7 +16,9 @@ services:
       - "8080:5000"
     restart: always
 
-watchtower:
+  watchtower:
+    # On ajoute le tag "latest-dev" ou on force l'image officielle 
+    # qui contient le support multi-plateforme
     image: containrrr/watchtower:latest
     container_name: watchtower
     # Force Docker à utiliser l'architecture du système hôte
