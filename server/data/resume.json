@@ -11,11 +11,24 @@
   },
   "experience": [
     {
+      "period": "2026",
+      "title": "Full-stack developer",
+      "company": "Alteca",
+      "location": "Nantes",
+      "current": true,
+      "projects": [
+        {
+          "client": "Internal",
+          "technologies": ["Java", "Springboot", "Angular", "Tailwind", "HTML", "CSS", "Jira", "Gitlab"],
+          "description": "Migration and redesign of an internal AI chatbot interface used to leverage internal documentation and support employees. The project stack includes Java Spring Boot, Angular 21, Tailwind, HTML, CSS, Jira and Gitlab."
+        }
+      ]
+    },
+    {
       "period": "2025 - 2026",
       "title": "Full-stack developer",
       "company": "Darwin",
       "location": "Annecy",
-      "current": true,
       "projects": [
         {
           "client": "Crédit Agricole Technologies & Services",

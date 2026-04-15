@@ -48,6 +48,10 @@
   },
   "experience": {
     "currentPosition": "Poste actuel",
+    "2026": {
+      "title": "Développeur full-stack",
+      "description": "Migration et refonte de l'interface d'un chatbot IA interne permettant d'utiliser la documentation interne pour aider les collaborateurs."
+    },
     "2025_2026": {
       "title": "Développeur full-stack",
       "description": "Projet de gestion des comptes-rendus pour le commercial du Crédit Agricole lui permettant de gérer ses rapports d'activité commerciale également pour capitaliser sur son démarchage. Fonctionnement par unité applicative, très sectorisé. Ajout de nombreuses fonctionnalités pour faciliter la vie du commercial. Front end avec technologies natives et back end Java Spring Boot. Mise en place de dashboard ELK pour réaliser des indicateurs métiers. Projet Agile de 4 à 6 développeurs avec 2 business analysts et un product owner."

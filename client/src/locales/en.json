@@ -48,6 +48,10 @@
   },
   "experience": {
     "currentPosition": "Current position",
+    "2026": {
+      "title": "Full-stack developer",
+      "description": "Migration and redesign of an internal AI chatbot interface to leverage internal documentation and support employees."
+    },
     "2025_2026": {
       "title": "Full-stack developer",
       "description": "Project for managing reports for Crédit Agricole sales representatives, allowing them to manage their commercial activity reports and capitalize on their prospecting. Organization by application unit, very sectorized. Addition of many features to facilitate the sales representative's work. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
