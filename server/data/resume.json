@@ -12,15 +12,15 @@
   "experience": [
     {
       "period": "2026",
-      "title": "Full-stack developer",
+      "title": "Frontend developer",
       "company": "Alteca",
-      "location": "Nantes",
+      "location": "Vannes",
       "current": true,
       "projects": [
         {
-          "client": "Internal",
-          "technologies": ["Java", "Springboot", "Angular", "Tailwind", "HTML", "CSS", "Jira", "Gitlab"],
-          "description": "Migration and redesign of an internal AI chatbot interface used to leverage internal documentation and support employees. The project stack includes Java Spring Boot, Angular 21, Tailwind, HTML, CSS, Jira and Gitlab."
+          "client": "Crédit Agricole Technologies & Services",
+          "technologies": ["NodeJS", "Angular 22", "Copilot"],
+          "description": "Member of the Frontend Chapter, I support squads by providing expertise in Node.js and Angular 22. Currently working with the commercial squad in charge of the selfcare journey enabling SMEs (TPE) to subscribe to contracts on-site and remotely, including management of the various options. Heavy use of GitHub Copilot."
         }
       ]
     },
