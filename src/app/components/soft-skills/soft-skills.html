@@ -29,11 +29,12 @@
     }
 
     @if (skills() && skills()!.languages && skills()!.languages.length > 0) {
-      <h3 class="category-title languages-title">
-        <i class="fa-solid fa-globe category-icon"></i>
-        {{ i18n.t('skills.languages') }}
-      </h3>
-      <div class="languages-grid languages-full-width">
+      <div class="languages-section">
+        <h3 class="category-title">
+          <i class="fa-solid fa-globe category-icon"></i>
+          {{ i18n.t('skills.languages') }}
+        </h3>
+        <div class="languages-grid">
         @for (lang of skills()!.languages; track lang.name) {
           <div class="technical-subcategory language-card">
             <div class="language-name-level">
@@ -58,6 +59,7 @@
             }
           </div>
         }
+        </div>
       </div>
     }
   </div>
