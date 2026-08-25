@@ -1,0 +1,8 @@
+<button
+  class="pdf-download-button"
+  (click)="handleDownload()"
+  [attr.aria-label]="i18n.t('pdf.download')"
+>
+  <i class="fa-solid fa-file-pdf pdf-icon"></i>
+  <span class="pdf-text">{{ i18n.t('pdf.download') }}</span>
+</button>

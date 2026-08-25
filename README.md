@@ -1,109 +1,51 @@
-# Resume React Node.js
+# Resume
 
 Site web pour exposer le CV d'Arthur BOSSHARDT - Full-stack developer
 
+Application Angular statique (pas de backend). Les données du CV et les traductions sont chargées en JSON depuis `src/assets/`, et les PDF téléchargeables sont servis depuis `public/pdf/`.
+
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir installé :
-- **Node.js** (version 14 ou supérieure) - [Télécharger Node.js](https://nodejs.org/)
+- **Node.js** (version 20 ou supérieure)
 - **npm** (inclus avec Node.js)
-
-Pour vérifier l'installation :
-```bash
-node --version
-npm --version
-```
-
-## Structure du projet
-
-- `server/` - Backend Node.js/Express avec API REST
-- `client/` - Frontend React
 
 ## Installation
 
-### Backend
+```bash
+npm install
+```
+
+## Développement
 
 ```bash
-cd server
-npm install
 npm start
 ```
 
-Le serveur démarre sur le port 5000 par défaut.
+L'application démarre sur http://localhost:4200
 
-### Frontend
+## Build de production
 
 ```bash
-cd client
-npm install
-npm start
+npm run build
 ```
 
-L'application React démarre sur le port 3000 par défaut.
+Les fichiers statiques sont générés dans `dist/resume/browser`.
 
-## API Endpoints
+## Déploiement
 
-- `GET /api/resume` - Récupère toutes les données du CV
-- `GET /api/resume/personal` - Informations personnelles
-- `GET /api/resume/experience` - Expérience
-- `GET /api/resume/education` - Formation
-- `GET /api/resume/skills` - Compétences
+Déployé sur [Vercel](https://vercel.com), avec la branche `develop` configurée comme branche de déploiement (push sur `develop` = déploiement).
+
+## Structure du projet
+
+- `src/app/components/` - Composants Angular standalone (header, breadcrumb, experience, education, skills, soft-skills, pdf-download-button)
+- `src/app/services/` - Services (données du CV, i18n)
+- `src/assets/data/resume.json` - Données du CV
+- `src/assets/i18n/` - Traductions (en/fr)
+- `public/pdf/` - CV au format PDF téléchargeable
+- `public/images/` - Photo de profil
 
 ## Technologies utilisées
 
-### Backend
-- Node.js
-- Express
-- CORS
-
-### Frontend
-- React
-- Axios
-- CSS3
-
-## Fonctionnalités
-
-- Affichage complet du CV avec toutes les sections
-- Design moderne et responsive
-- API REST pour servir les données
-- Interface utilisateur intuitive
-
-## Dépannage
-
-### Erreur : 'react-scripts' n'est pas reconnu
-
-Cette erreur signifie que les dépendances du client n'ont pas été installées. Solution :
-
-```bash
-cd client
-npm install
-```
-
-### Erreur : 'npm' n'est pas reconnu
-
-Node.js n'est pas installé ou pas dans le PATH. Solutions :
-
-1. **Installer Node.js** : Téléchargez et installez depuis [nodejs.org](https://nodejs.org/)
-2. **Redémarrer le terminal** après l'installation
-3. **Vérifier le PATH** : Assurez-vous que Node.js est dans votre PATH système
-
-### Installation complète des dépendances
-
-Pour installer toutes les dépendances (serveur et client) :
-
-```bash
-# Depuis la racine du projet
-npm run install-all
-```
-
-Ou manuellement :
-
-```bash
-# Backend
-cd server
-npm install
-
-# Frontend
-cd ../client
-npm install
-```
+- Angular 22 (standalone components)
+- TypeScript
+- Font Awesome (icônes)

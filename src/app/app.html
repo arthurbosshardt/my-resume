@@ -1,0 +1,46 @@
+@if (loading()) {
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Loading resume...</p>
+  </div>
+} @else if (error()) {
+  <div class="error">
+    <p>Error loading resume: {{ error() }}</p>
+  </div>
+} @else if (resumeData(); as data) {
+  <div class="app">
+    <div class="resume-container">
+      <app-header
+        [personal]="data.personal"
+        [currentLanguage]="i18n.currentLanguage()"
+        (languageChange)="i18n.changeLanguage($event)"
+      />
+      <app-breadcrumb
+        [currentSection]="currentSection()"
+        (sectionChange)="onSectionChange($event)"
+      />
+      <div class="resume-content">
+        @if (currentSection() === 'softSkills') {
+          <app-soft-skills [skills]="data.skills" />
+        } @else if (currentSection() === 'hardSkills' && !isMobile()) {
+          <app-skills [skills]="data.skills.technical" />
+        } @else {
+          <div class="main-content">
+            @switch (currentSection()) {
+              @case ('education') {
+                <app-education [education]="data.education" />
+              }
+              @case ('hardSkills') {
+                <app-skills [skills]="data.skills.technical" />
+              }
+              @default {
+                <app-experience [experience]="data.experience" (sectionChange)="onSectionChange($event)" />
+              }
+            }
+          </div>
+        }
+      </div>
+    </div>
+    <app-pdf-download-button [currentLanguage]="i18n.currentLanguage()" />
+  </div>
+}

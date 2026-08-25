@@ -1,0 +1,74 @@
+<div class="header">
+  <div class="header-content">
+    <div class="header-grid">
+      <h1 class="name">{{ personal().name }}</h1>
+      <a
+        href="https://github.com/arthurbosshardt"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-github social-icon"></i>
+        @arthurbosshardt
+      </a>
+      <p class="role">{{ i18n.t('header.role') }}</p>
+      <a
+        href="https://www.linkedin.com/in/arthur-bosshardt-196900156/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-linkedin social-icon"></i>
+        @arthur_bosshardt
+      </a>
+      <p class="age-location">
+        <i class="fa-solid fa-cake-candles age-icon"></i>
+        {{ personal().age }} {{ i18n.t('header.yearsOld') }}
+        <span class="separator"> • </span>
+        Vannes 56000 🇫🇷
+      </p>
+      <a [href]="'tel:' + personal().contact.phone" class="contact-link">
+        <i class="fa-solid fa-phone phone-icon"></i>
+        {{ formatPhone(personal().contact.phone) }}
+      </a>
+      <div class="header-language-toggle">
+        <button
+          class="header-language-toggle-btn"
+          [class.active]="currentLanguage() === 'en'"
+          (click)="languageChange.emit('en')"
+          title="English"
+        >
+          🇬🇧
+        </button>
+        <button
+          class="header-language-toggle-btn"
+          [class.active]="currentLanguage() === 'fr'"
+          (click)="languageChange.emit('fr')"
+          title="Français"
+        >
+          🇫🇷
+        </button>
+      </div>
+      <a [href]="'mailto:' + personal().contact.email" class="contact-link">
+        <i class="fa-solid fa-envelope contact-icon"></i>
+        {{ personal().contact.email }}
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="header-image">
+        @if (!imageError()) {
+          <img
+            [src]="imagePath"
+            [alt]="personal().name"
+            class="profile-photo"
+            (error)="onImageError()"
+          />
+        } @else {
+          <div class="profile-placeholder">
+            <span>Photo</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

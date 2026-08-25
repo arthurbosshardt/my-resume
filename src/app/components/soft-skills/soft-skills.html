@@ -1,0 +1,66 @@
+<section class="soft-skills-section">
+  <div class="soft-skills-grid">
+    @if (skills() && skills()!.soft && skills()!.soft.length > 0) {
+      <div class="skills-category-card">
+        <h3 class="category-title">
+          <i class="fa-solid fa-handshake category-icon"></i>
+          {{ i18n.t('skills.socialSkills') }}
+        </h3>
+        <div class="skills-tags">
+          @for (skill of skills()!.soft; track skill) {
+            <span class="skill-tag">{{ getSoftSkillLabel(skill) }}</span>
+          }
+        </div>
+      </div>
+    }
+
+    @if (skills() && skills()!.concepts && skills()!.concepts.length > 0) {
+      <div class="skills-category-card">
+        <h3 class="category-title">
+          <i class="fa-solid fa-lightbulb category-icon"></i>
+          {{ i18n.t('skills.concepts') }}
+        </h3>
+        <div class="skills-tags">
+          @for (concept of skills()!.concepts; track concept) {
+            <span class="skill-tag">{{ concept }}</span>
+          }
+        </div>
+      </div>
+    }
+
+    @if (skills() && skills()!.languages && skills()!.languages.length > 0) {
+      <h3 class="category-title languages-title">
+        <i class="fa-solid fa-globe category-icon"></i>
+        {{ i18n.t('skills.languages') }}
+      </h3>
+      <div class="languages-grid languages-full-width">
+        @for (lang of skills()!.languages; track lang.name) {
+          <div class="language-item">
+            <div class="language-name-level">
+              @if (getLanguageFlag(lang.name); as flag) {
+                <span [title]="lang.name">{{ flag }}</span>
+              }
+              <span class="language-name">{{ lang.name }}</span>
+              <span class="language-level"> - {{ getLevel(lang.level) }}</span>
+            </div>
+            @if (lang.communication) {
+              <div class="language-detail">
+                <span class="language-label-bold">{{ i18n.t('skills.communication') }}:</span> {{ getLevel(lang.communication) }}
+              </div>
+            }
+            @if (lang.understanding) {
+              <div class="language-detail">
+                <span class="language-label-bold">{{ i18n.t('skills.understanding') }}:</span> {{ getLevel(lang.understanding) }}
+              </div>
+            }
+            @if (lang.certification) {
+              <div class="language-certification">
+                <span class="toeic-label">TOEIC</span> {{ getCertification(lang.certification) }}
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Styles communs pour les titres de section (partages entre plusieurs composants) */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #cc553e;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-icon {
+  font-size: 1.6rem;
+  color: #cc553e;
+}
+
+/* Styles communs pour les tags de compétences */
+.skill-tag {
+  background: #f5f5f0;
+  color: #666;
+  padding: 5px 12px;
+  border-radius: 18px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.3;
+}
+
+.skill-tag:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: #f0f0eb;
+}
+
+/* Styles communs pour toutes les cartes du CV */
+.experience-item,
+.education-item,
+.technical-subcategory,
+.skills-category-card,
+.language-item {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #e8e8e3;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.skills-category-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-item:hover,
+.education-item:hover,
+.technical-subcategory:hover,
+.skills-category-card:hover,
+.language-item:hover {
+  box-shadow: 0 6px 20px rgba(204, 85, 62, 0.25);
+  border-color: #cc553e;
+  transform: translateY(-2px);
+  position: relative;
+  z-index: 101;
+}
+
+.language-item {
+  padding: 16px;
+}
+
+/* Responsive: 4K (2561px+) */
+@media (min-width: 2561px) {
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .section-icon {
+    font-size: 2rem;
+  }
+
+  .skill-tag {
+    font-size: 1.1rem;
+    padding: 6px 14px;
+  }
+
+  .experience-item,
+  .education-item,
+  .technical-subcategory,
+  .skills-category-card,
+  .language-item {
+    padding: 25px;
+  }
+}
+
+/* Responsive: 2K (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  .section-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-tag {
+    font-size: 1.05rem;
+    padding: 6px 13px;
+  }
+
+  .experience-item,
+  .education-item,
+  .technical-subcategory,
+  .skills-category-card,
+  .language-item {
+    padding: 22px;
+  }
+}
+
+/* Responsive: Mobile (< 768px) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+
+  .section-icon {
+    font-size: 1.3rem;
+  }
+
+  .skill-tag {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+  }
+
+  .experience-item,
+  .education-item,
+  .technical-subcategory,
+  .skills-category-card,
+  .language-item {
+    padding: 15px;
+  }
+
+  /* Hard skills scrollable en mobile */
+  .resume-content .skills-section {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+}

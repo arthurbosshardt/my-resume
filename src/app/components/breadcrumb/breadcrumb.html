@@ -1,0 +1,19 @@
+<nav class="breadcrumb">
+  <div class="breadcrumb-wrapper">
+    <div class="breadcrumb-container">
+      @for (section of sections; track section.id; let last = $last) {
+        <button
+          class="breadcrumb-item"
+          [class.active]="currentSection() === section.id"
+          (click)="sectionChange.emit(section.id)"
+        >
+          <i class="{{ section.icon }} breadcrumb-icon"></i>
+          {{ i18n.t(section.labelKey) }}
+        </button>
+        @if (!last) {
+          <span class="breadcrumb-separator">•</span>
+        }
+      }
+    </div>
+  </div>
+</nav>

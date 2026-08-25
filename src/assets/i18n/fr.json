@@ -1,0 +1,106 @@
+{
+  "header": {
+    "yearsOld": "ans",
+    "location": "Vannes 56000 - France",
+    "role": "Développeur full-stack - Recherche de missions à Vannes et ses alentours ou full remote"
+  },
+  "breadcrumb": {
+    "professionalExperience": "Expérience",
+    "education": "Formation",
+    "hardSkills": "Technique",
+    "softSkills": "Transverse"
+  },
+  "skills": {
+    "languagesFrameworks": "Langages & Frameworks",
+    "continuousIntegration": "Intégration continue",
+    "softwares": "Logiciels",
+    "projectTools": "Outils de projet",
+    "testing": "Tests",
+    "ai": "IA",
+    "socialSkills": "Compétences sociales",
+    "concepts": "Concepts",
+    "languages": "Langues",
+    "communication": "Communication",
+    "understanding": "Compréhension",
+    "alphabetical": "Alphabétique",
+    "byMastery": "Par maîtrise",
+    "levels": {
+      "Native": "Natif",
+      "Fluent": "Courant",
+      "Basics": "Bases",
+      "Advanced": "Avancé",
+      "Intermediate": "Intermédiaire",
+      "School basics": "Bases scolaires"
+    },
+    "softSkills": {
+      "meetingFacilitation": "Animation de réunions (démos, rétrospective...)",
+      "proactiveMindset": "Esprit proactif",
+      "estimationAndClientCommunication": "Estimation et communication client",
+      "technicalCommunicationMastery": "Maîtrise de la vulgarisation technique",
+      "adaptationToProjectMethodologies": "Adaptation aux méthodologies de projet",
+      "knowledgeOfBusinessProcesses": "Connaissance des processus d'entreprise (expérience en ESN)",
+      "easeInFacilitatingPresentations": "Facilité à animer les présentations (daily, affinage...)",
+      "pairProgramming": "Programmation en binôme"
+    }
+  },
+  "common": {
+    "remote": "Distanciel"
+  },
+  "experience": {
+    "currentPosition": "Poste actuel",
+    "2026": {
+      "title": "Développeur front-end",
+      "description": "Membre du Chapitre Front-end, j'interviens auprès des squads pour apporter une expertise en Node.js et Angular 22. Travail actuel avec la squad commerciale en charge du parcours selfcare permettant de souscrire au contrat des TPE sur place et à distance, avec la gestion des différentes options. Forte utilisation de GitHub Copilot."
+    },
+    "2025_2026": {
+      "title": "Développeur full-stack",
+      "description": "Projet de gestion des comptes-rendus pour le commercial du Crédit Agricole lui permettant de gérer ses rapports d'activité commerciale également pour capitaliser sur son démarchage. Fonctionnement par unité applicative, très sectorisé. Ajout de nombreuses fonctionnalités pour faciliter la vie du commercial. Front end avec technologies natives et back end Java Spring Boot. Mise en place de dashboard ELK pour réaliser des indicateurs métiers. Projet Agile de 4 à 6 développeurs avec 2 business analysts et un product owner."
+    },
+    "2023_2025": {
+      "title": "Développeur full-stack",
+      "description": "Contexte métier autour de la bourse et de la gestion de son portefeuille de titres. Projet existant avec Java JEE et Spring Boot ainsi que projet de refonte ergonomique en Angular 18 et application mobile. Contexte métier très dense mais très intéressant avec fonctionnement par tribu, les projets sont en cycle en V mais une transition vers l'Agile est souhaitée et aujourd'hui effective."
+    },
+    "2021_2023": {
+      "title": "Développeur full-stack",
+      "description": "Maintenance, évolution et corrective sur le formulaire de saisie des incidents SNCF. Application avec de fortes problématiques d'ergonomie car les utilisateurs sont stressés, travaillent de nuit également et ne sont pas informaticiens. L'interface permet la saisie audio ou textuelle des incidents sur les lignes afin d'afficher en gare, à bord des trains ou sur les réseaux les interruptions ou ralentissements à venir. Refonte complète sur une application one page. Étude de faisabilité pour passer de AngularJS à Angular 16. Projet en agile avec 2-6 développeurs avec Scrum Master, Product Owner et Product Manager."
+    },
+    "2018_2021": {
+      "title": "Développeur Big Data",
+      "description": "Développement d'une application de reconnaissance des afficheurs en gare et dans les trains. En parallèle, travail en tant que développeur big data sur la brique de monitoring des applicatifs SNCF en utilisant ELK. L'objectif est de fournir des indicateurs opérationnels mais aussi techniques. Utilisation de Google Analytics avec une brique .NET pour créer des indicateurs supplémentaires comme l'affluence sur les médias SNCF. Développement de plugins non natifs sur Kibana. Projet en agile dans une équipe de 4 à 6 développeurs avec Scrum Master, Product Owner et Product Manager."
+    },
+    "2018": {
+      "title": "Développeur Web",
+      "description": "Développement d'une application JHipster avec apprentissage des bases du versioning. L'objectif est de mettre en place une application de tournoi de jeu en interne dans le cadre de la vie d'entreprise. Développeur stagiaire dans le cadre du pôle innovation."
+    }
+  },
+  "education": {
+    "upcoming": "À venir",
+    "2026": {
+      "title": "Formation React",
+      "description": "Formation sur le framework React en tant que développeur web et mobile IT."
+    },
+    "2024": {
+      "title": "Formation Angular",
+      "description": "Formation sur le framework Angular avec Orsys."
+    },
+    "2022": {
+      "title": "Certification SCRUM Master",
+      "description": "PSM I - Professional Scrum Master 1 Scrum.org."
+    },
+    "2019_2021": {
+      "title": "Master EPSI",
+      "description": "Certification RNCP Niveau 7 - Expert en Informatique et Systèmes d'Information. Alternance chez Capgemini (3 semaines / 1 semaine). Management de projet, ingénierie logicielle, spécialisation Big Data & IA, mémoire sur la veille technique."
+    },
+    "2018_2019": {
+      "title": "Licence Professionnelle MIAR",
+      "description": "Alternance chez Capgemini (3 semaines / 1 semaine). Programmation orientée objet, Développement mobile, Web Client/Serveur, Outils de développement, Programmation distribuée..."
+    },
+    "2016_2018": {
+      "title": "DUT Informatique",
+      "description": "Modules informatiques (développement web, bases de données, réseaux). Formation générale (anglais, droit, comptabilité, gestion de projet)."
+    }
+  },
+  "pdf": {
+    "download": "Télécharger le PDF en français"
+  }
+}

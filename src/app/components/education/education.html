@@ -1,0 +1,27 @@
+<section class="education-section">
+  <div class="education-list">
+    @for (edu of sortedEducation; track edu.period + edu.title) {
+      <div class="education-item">
+        <div class="education-period">{{ edu.period }}</div>
+        <div class="education-content">
+          <div class="education-title-row">
+            @if (edu.upcoming) {
+              <span class="upcoming-badge">{{ i18n.t('education.upcoming') }}</span>
+            }
+            <div class="education-school-info">
+              <i class="fa-solid fa-graduation-cap school-icon"></i>
+              <h3 class="education-title">{{ getSchoolName(edu) }}</h3>
+            </div>
+            @if (getLocation(edu); as location) {
+              <div class="education-location-info">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <span class="education-location">{{ location }}</span>
+              </div>
+            }
+          </div>
+          <p class="education-description" [innerHTML]="getDescription(edu)"></p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

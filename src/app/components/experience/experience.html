@@ -1,0 +1,50 @@
+<section class="experience-section">
+  <div class="experience-list">
+    @for (exp of sortedExperience; track exp.period + exp.title) {
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title-row">
+            <div class="experience-period">{{ exp.period }}</div>
+            @if (exp.current) {
+              <span class="current-badge">{{ i18n.t('experience.currentPosition') }}</span>
+            }
+            <h3 class="experience-title">{{ getTitle(exp) }}</h3>
+            <span class="experience-separator">•</span>
+            <div class="experience-company-info">
+              <i class="fa-solid fa-building company-icon"></i>
+              <span class="experience-company">{{ exp.company }}</span>
+            </div>
+            @if (exp.projects && exp.projects.length > 0 && exp.projects[0].client) {
+              <span class="experience-separator">•</span>
+              <div class="experience-client-info">
+                <i class="fa-solid fa-user-tie client-icon"></i>
+                <span class="experience-client">{{ exp.projects[0].client }}</span>
+              </div>
+            }
+            <span class="experience-separator">•</span>
+            <div class="experience-location-info">
+              <i class="fa-solid fa-location-dot location-icon"></i>
+              <span class="experience-location">{{ exp.location }}</span>
+            </div>
+          </div>
+        </div>
+        @for (project of exp.projects; track project.description) {
+          <div class="project-item">
+            <p class="project-description" [innerHTML]="getDescription(exp, project.description)"></p>
+            <div class="project-technologies-tags">
+              @for (tech of project.technologies; track tech) {
+                <span
+                  class="skill-tag clickable-skill-tag"
+                  (click)="onTechnologyClick()"
+                  style="cursor: pointer"
+                >
+                  {{ tech }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>
