@@ -89,7 +89,6 @@
 .header-grid > * {
   line-height: 1;
   margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -202,7 +201,7 @@
   gap: 8px;
   transition: all 0.3s ease;
   opacity: 0.95;
-  padding: 6px 12px;
+  padding: var(--pad-chip);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -283,7 +282,7 @@
   .social-link,
   .contact-link {
     font-size: 1rem;
-    padding: 8px 14px;
+    padding: var(--pad-chip-lg);
     min-height: 44px;
   }
 
@@ -325,7 +324,6 @@
   .social-link,
   .contact-link {
     font-size: 0.95rem;
-    padding: 7px 13px;
     min-height: 42px;
   }
 
@@ -417,7 +415,6 @@
   .header-grid > * {
     line-height: 1;
     margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -605,14 +602,6 @@
       padding: 1px 2px;
       height: 16px;
     }
-
-    .header-grid {
-      gap: 6px;
-    }
-
-    .header {
-      padding: 8px 10px;
-    }
   }
 
   .profile-photo {
@@ -621,11 +610,5 @@
 
   .profile-placeholder {
     display: none;
-  }
-
-  .header-language-toggle-btn {
-    font-size: 0.75rem;
-    padding: 4px 6px;
-    min-height: 26px;
   }
 }

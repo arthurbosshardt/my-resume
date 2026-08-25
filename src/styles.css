@@ -20,6 +20,28 @@ code {
     monospace;
 }
 
+/* Echelle d'espacement (grille 8pt / 4px, standard Material/Carbon) partagee par tous les composants */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* Etiquettes/pastilles (skill-tag, periode, badge de statut) */
+  --pad-pill: var(--space-2) var(--space-4);
+  --pad-pill-compact: var(--space-1) var(--space-3);
+
+  /* Items de navigation (breadcrumb) */
+  --pad-nav: var(--space-3) var(--space-5);
+  --pad-nav-compact: var(--space-2) var(--space-2);
+
+  /* Puces du header (liens sociaux/contact) */
+  --pad-chip: var(--space-2) var(--space-3);
+  --pad-chip-lg: var(--space-2) var(--space-4);
+}
+
 /* Styles communs pour les titres de section (partages entre plusieurs composants) */
 .section-title {
   font-size: 1.8rem;
@@ -40,7 +62,7 @@ code {
 .skill-tag {
   background: #f5f5f0;
   color: #666;
-  padding: 5px 12px;
+  padding: var(--pad-pill);
   border-radius: 18px;
   border: 1px solid #ddd;
   font-size: 0.95rem;
@@ -90,7 +112,7 @@ code {
 }
 
 .language-item {
-  padding: 16px;
+  padding: var(--space-4);
 }
 
 /* Responsive: 4K (2561px+) */
@@ -106,7 +128,6 @@ code {
 
   .skill-tag {
     font-size: 1.1rem;
-    padding: 6px 14px;
   }
 
   .experience-item,
@@ -115,6 +136,10 @@ code {
   .skills-category-card,
   .language-item {
     padding: 25px;
+  }
+
+  .language-item {
+    padding: var(--space-5);
   }
 }
 
@@ -131,7 +156,6 @@ code {
 
   .skill-tag {
     font-size: 1.05rem;
-    padding: 6px 13px;
   }
 
   .experience-item,
@@ -140,6 +164,10 @@ code {
   .skills-category-card,
   .language-item {
     padding: 22px;
+  }
+
+  .language-item {
+    padding: calc(var(--space-4) + var(--space-1));
   }
 }
 
@@ -157,7 +185,7 @@ code {
 
   .skill-tag {
     font-size: 0.9rem;
-    padding: 4px 10px;
+    padding: var(--pad-pill-compact);
   }
 
   .experience-item,
@@ -166,6 +194,10 @@ code {
   .skills-category-card,
   .language-item {
     padding: 15px;
+  }
+
+  .language-item {
+    padding: var(--space-3);
   }
 
   /* Hard skills scrollable en mobile */

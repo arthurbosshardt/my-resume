@@ -26,7 +26,7 @@
   color: white;
   background: #cc553e;
   border: 2px solid #cc553e;
-  padding: 6px 14px;
+  padding: var(--pad-pill);
   border-radius: 8px;
   font-size: 0.9rem;
   min-width: 120px;
@@ -45,7 +45,7 @@
 .current-badge {
   color: #cc553e;
   border: 2px solid #cc553e;
-  padding: 6px 14px;
+  padding: var(--pad-pill);
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -142,7 +142,6 @@
   .experience-period,
   .current-badge {
     font-size: 1rem;
-    padding: 8px 16px;
   }
 
   .experience-company-info,
@@ -174,7 +173,6 @@
   .experience-period,
   .current-badge {
     font-size: 0.95rem;
-    padding: 7px 15px;
   }
 
   .experience-company-info,
@@ -209,7 +207,7 @@
     min-width: auto;
     width: 100%;
     font-size: 0.85rem;
-    padding: 5px 12px;
+    padding: var(--pad-pill-compact);
   }
 
   .experience-title {

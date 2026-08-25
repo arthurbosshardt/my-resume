@@ -187,7 +187,7 @@
   border: none;
   color: #cc553e;
   cursor: pointer;
-  padding: 2px 4px;
+  padding: var(--space-1);
   border-radius: 4px;
   transition: all 0.2s;
   display: flex;

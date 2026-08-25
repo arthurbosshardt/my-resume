@@ -20,7 +20,7 @@
   color: white;
   background: #cc553e;
   border: 2px solid #cc553e;
-  padding: 6px 14px;
+  padding: var(--pad-pill);
   border-radius: 8px;
   font-size: 0.9rem;
   min-width: 120px;
@@ -45,7 +45,7 @@
 .upcoming-badge {
   color: #cc553e;
   border: 2px solid #cc553e;
-  padding: 6px 14px;
+  padding: var(--pad-pill);
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -115,7 +115,6 @@
 
   .education-period {
     font-size: 1rem;
-    padding: 8px 16px;
     min-width: 140px;
   }
 
@@ -153,7 +152,6 @@
 
   .education-period {
     font-size: 0.95rem;
-    padding: 7px 15px;
     min-width: 130px;
   }
 
@@ -181,13 +179,6 @@
     gap: 15px;
   }
 
-  .education-period {
-    min-width: auto;
-    width: 100%;
-    font-size: 0.85rem;
-    padding: 5px 12px;
-  }
-
   .education-title-row {
     flex-direction: column;
     align-items: flex-start;
@@ -199,7 +190,7 @@
     min-width: auto;
     width: 100%;
     font-size: 0.85rem;
-    padding: 5px 12px;
+    padding: var(--pad-pill-compact);
   }
 
   .education-title {
