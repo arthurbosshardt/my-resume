@@ -171,8 +171,8 @@ code {
   }
 }
 
-/* Responsive: Mobile (< 768px) */
-@media (max-width: 768px) {
+/* Responsive: Mobile (< 1024px) */
+@media (max-width: 1024px) {
   .section-title {
     font-size: 1.4rem;
     margin-bottom: 20px;

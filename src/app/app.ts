@@ -1,4 +1,5 @@
 import { Component, DestroyRef, OnInit, inject, signal } from '@angular/core';
+import { MOBILE_BREAKPOINT_PX } from './constants/breakpoints';
 import { I18nService } from './services/i18n.service';
 import { ResumeService } from './services/resume.service';
 import { Resume, Section } from './models/resume.model';
@@ -25,10 +26,10 @@ export class App implements OnInit {
   readonly loading = signal(true);
   readonly error = signal<string | null>(null);
   readonly currentSection = signal<Section>('experience');
-  readonly isMobile = signal(window.innerWidth <= 768);
+  readonly isMobile = signal(window.innerWidth <= MOBILE_BREAKPOINT_PX);
 
   ngOnInit(): void {
-    const handleResize = () => this.isMobile.set(window.innerWidth <= 768);
+    const handleResize = () => this.isMobile.set(window.innerWidth <= MOBILE_BREAKPOINT_PX);
     window.addEventListener('resize', handleResize);
     this.destroyRef.onDestroy(() => window.removeEventListener('resize', handleResize));
 

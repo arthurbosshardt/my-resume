@@ -40,7 +40,7 @@
 }
 
 /* Responsive: Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .pdf-download-button {
     bottom: 20px;
     right: 20px;

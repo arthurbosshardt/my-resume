@@ -179,8 +179,8 @@
   }
 }
 
-/* Responsive: PC 1920x1080 (769px - 1920px) */
-@media (min-width: 769px) and (max-width: 1920px) {
+/* Responsive: PC 1920x1080 (1025px - 1920px) */
+@media (min-width: 1025px) and (max-width: 1920px) {
   .soft-skills-section {
     padding: 20px 30px;
     padding-top: 20px;
@@ -193,8 +193,8 @@
   }
 }
 
-/* Responsive: Mobile (< 768px) */
-@media (max-width: 768px) {
+/* Responsive: Mobile (< 1024px) */
+@media (max-width: 1024px) {
   .soft-skills-section {
     padding: 15px 15px;
     padding-top: 20px;

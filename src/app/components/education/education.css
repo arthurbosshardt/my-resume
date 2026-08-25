@@ -172,8 +172,8 @@
   }
 }
 
-/* Responsive: Mobile (< 768px) */
-@media (max-width: 768px) {
+/* Responsive: Mobile (< 1024px) */
+@media (max-width: 1024px) {
   .education-item {
     flex-direction: column;
     gap: 15px;

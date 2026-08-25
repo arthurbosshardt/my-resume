@@ -190,8 +190,8 @@
   }
 }
 
-/* Responsive: Mobile (< 768px) */
-@media (max-width: 768px) {
+/* Responsive: Mobile (< 1024px) */
+@media (max-width: 1024px) {
   .experience-title-row {
     flex-direction: column;
     align-items: flex-start;

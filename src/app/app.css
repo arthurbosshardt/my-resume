@@ -62,8 +62,8 @@
 }
 
 /* Breakpoints responsive */
-/* Mobile: < 768px */
-/* PC 1920x1080: 768px - 1920px */
+/* Mobile: < 1024px */
+/* PC 1920x1080: 1024px - 1920px */
 /* 2K: 1921px - 2560px */
 /* 4K: > 2560px */
 
@@ -98,8 +98,8 @@
   }
 }
 
-/* Responsive: PC 1920x1080 (769px - 1920px) */
-@media (min-width: 769px) and (max-width: 1920px) {
+/* Responsive: PC 1920x1080 (1025px - 1920px) */
+@media (min-width: 1025px) and (max-width: 1920px) {
   .resume-container {
     width: 100%;
     max-width: 100%;
@@ -110,8 +110,8 @@
   }
 }
 
-/* Responsive: Mobile (< 768px) */
-@media (max-width: 768px) {
+/* Responsive: Mobile (< 1024px) */
+@media (max-width: 1024px) {
   .app {
     padding: 5px;
   }
