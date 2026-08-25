@@ -19,7 +19,7 @@
     <div class="header-grid">
       <div class="header-left">
         <h1 class="name"><span class="name-first">{{ getFirstName() }}</span> <span class="name-last">{{ getLastName() }}</span></h1>
-        <p class="role">{{ i18n.t('header.role') }} <span class="role-location">{{ i18n.t('header.roleLocation') }}</span></p>
+        <p class="role">{{ i18n.t('header.role') }} <span class="role-location" [innerHTML]="i18n.t('header.roleLocation')"></span></p>
         <p class="age-location">
           <i class="fa-solid fa-cake-candles age-icon"></i>
           {{ getAge() }} {{ i18n.t('header.yearsOld') }}

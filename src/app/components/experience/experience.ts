@@ -4,6 +4,7 @@ import { Experience as ExperienceModel, Project, Section, Skills } from '../../m
 import {
   sortByPeriod,
   formatDescription,
+  boldTechnicalTerms,
   getTranslationKey,
   formatLocation,
   getTechnologyIcon,
@@ -38,7 +39,7 @@ export class Experience {
 
   getDescription(exp: ExperienceModel, description: string): string {
     const translated = this.i18n.t(`experience.${getTranslationKey(exp.period)}.description`, description);
-    return formatDescription(translated);
+    return boldTechnicalTerms(formatDescription(translated), this.skills());
   }
 
   getShortDescription(exp: ExperienceModel, project: Project): string {

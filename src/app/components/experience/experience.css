@@ -35,6 +35,18 @@
   flex-shrink: 0;
 }
 
+.experience-role-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-icon {
+  font-size: 1.1rem;
+  color: #cc553e;
+  flex-shrink: 0;
+}
+
 .experience-title {
   font-size: 1.3rem;
   font-weight: 600;
@@ -145,6 +157,10 @@
     font-size: 1.5rem;
   }
 
+  .role-icon {
+    font-size: 1.3rem;
+  }
+
   .experience-period,
   .current-badge {
     font-size: 1rem;
@@ -170,6 +186,10 @@
 
   .experience-title {
     font-size: 1.4rem;
+  }
+
+  .role-icon {
+    font-size: 1.2rem;
   }
 
   .experience-period,
@@ -210,6 +230,10 @@
 
   .experience-title {
     font-size: 1.1rem;
+  }
+
+  .role-icon {
+    font-size: 1rem;
   }
 
   .experience-company-info,

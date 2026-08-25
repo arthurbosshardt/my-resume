@@ -132,6 +132,7 @@ code {
 
 .flip-card-inner {
   display: grid;
+  position: relative;
 }
 
 .flip-card-face {
@@ -148,7 +149,12 @@ code {
   transition: opacity 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+/* Le verso est cale en absolu sur la hauteur du recto (seule face en flux normal)
+   et scrolle son propre contenu plutot que d'agrandir la carte. */
 .flip-card-back {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
   opacity: 0;
   pointer-events: none;
 }

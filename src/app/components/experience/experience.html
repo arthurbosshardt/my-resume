@@ -20,7 +20,10 @@
                 @if (exp.current) {
                   <span class="current-badge">{{ i18n.t('experience.currentPosition') }}</span>
                 }
-                <h3 class="experience-title">{{ getTitle(exp) }}</h3>
+                <div class="experience-role-info">
+                  <i class="fa-solid fa-briefcase role-icon"></i>
+                  <h3 class="experience-title">{{ getTitle(exp) }}</h3>
+                </div>
                 <span class="experience-separator">•</span>
                 <div class="experience-company-info">
                   <i class="fa-solid fa-building company-icon"></i>
@@ -63,15 +66,8 @@
             </div>
           </div>
           <div class="flip-card-face flip-card-back experience-item">
-            <div class="experience-header">
-              <div class="experience-title-row">
-                <h3 class="experience-title">{{ getTitle(exp) }}</h3>
-              </div>
-            </div>
             @for (project of exp.projects; track project.description) {
-              <div class="project-item">
-                <p class="project-description" [innerHTML]="getDescription(exp, project.description)"></p>
-              </div>
+              <p class="project-description" [innerHTML]="getDescription(exp, project.description)"></p>
             }
             <div class="flip-hint">
               <i class="fa-solid fa-arrow-rotate-left"></i>

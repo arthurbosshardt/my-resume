@@ -55,6 +55,25 @@ export function formatDescription(text: string | undefined): string {
   return text.replace(/\. ([A-Z])/g, '.<br />$1');
 }
 
+// Variantes redigees en prose des noms techniques deja canonicalises dans skills
+// (ex: "Spring Boot" dans le texte vs "Springboot" comme tag), ajoutees uniquement
+// pour la detection de mise en gras, sans toucher au nom canonique des tags.
+const EXTRA_BOLD_TERMS = ['Spring Boot', 'VS Code', 'Argo CD', 'Node.js'];
+
+export function boldTechnicalTerms(text: string, skills: Skills | undefined): string {
+  if (!text || !skills) return text;
+  const terms = [...Object.values(skills.technical).flat(), ...skills.concepts, ...EXTRA_BOLD_TERMS];
+  const uniqueTerms = Array.from(new Set(terms)).sort((a, b) => b.length - a.length);
+  if (uniqueTerms.length === 0) return text;
+  const alternatives = uniqueTerms.map((term) => {
+    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const exclude = term === 'Express' ? '(?<!American )' : '';
+    return `(?<![A-Za-z0-9])${exclude}${escaped}(?![A-Za-z0-9])`;
+  });
+  const pattern = new RegExp(alternatives.join('|'), 'gi');
+  return text.replace(pattern, '<strong>$&</strong>');
+}
+
 export function getTranslationKey(period: string): string {
   return period.replace(/\s/g, '').replace(/-/g, '_');
 }

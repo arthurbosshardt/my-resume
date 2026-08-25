@@ -3,7 +3,7 @@
     "yearsOld": "years old",
     "location": "Vannes 56000 - France",
     "role": "Web developer",
-    "roleLocation": "based in Vannes or remote"
+    "roleLocation": "based in <strong>Vannes</strong> or <strong>remote</strong>"
   },
   "breadcrumb": {
     "professionalExperience": "Experience",
@@ -52,33 +52,33 @@
     "currentPosition": "Current position",
     "2026": {
       "title": "Frontend developer",
-      "shortDescription": "Cross-functional (Spotify) chapter, self-service journey for subscribing to a payment solution (CAWL).",
-      "description": "Member of a cross-functional chapter (Spotify model) at Crédit Agricole, developing Node.js and Angular applications. Currently working on the self-service (selfcare) journey for subscribing to the CAWL payment solution."
+      "shortDescription": "Fully autonomous design and development of the online subscription (self-care) journey for the CAWL (Crédit Agricole Worldline) professional payment offer. Front-end expert role (Angular / NodeJS) within the cross-functional chapter (Spotify model) for the payment commercial squad.",
+      "description": "Full development of the digital self-care subscription journey (a 100% autonomous process allowing professional clients to configure and finalize their online payment offer up to electronic contract signature). The CAWL project (similar to SumUp) covers equipment selection (mobile card readers, hardware card readers, or remote payment), configuration of accepted payment methods (American Express, etc.), and handling of business-specific requirements. As referent and expert of the cross-functional front-end chapter, close pairing with UX/UI designers in Figma is required to translate the mockups. Front-end architecture built on the latest version of Angular, backed by a BFF (Backend For Frontend) layer in NodeJS developed with GitHub Copilot assistance. Used the internal MUESLI design system. Worked autonomously on the front-end within a dedicated Squad (1 developer, 2 Business Analysts, 1 Product Owner) under Agile methodology with Jira, Confluence and Microsoft Teams."
     },
     "2025_2026": {
       "title": "Full-stack developer",
-      "shortDescription": "Internal application for sales representatives to report and manage their activities in order to qualify for a performance bonus.",
-      "description": "Internal application for Crédit Agricole sales representatives to report and manage their commercial activities in order to qualify for a performance bonus. Organization by application unit, very sectorized. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
+      "shortDescription": "Development and evolution of the core business tool for tracking advisors' sales activity. Worked under the Agile Spotify methodology within a squad. Development organized by Application Unit (AU) with a native front-end and a Java Spring Boot back-end.",
+      "description": "Designed and maintained the strategic tool for managing review reports, insurance recommendations, and commercial activity reports. Delivered back-end development in Java / Spring Boot and front-end development (HTML5, CSS3, JavaScript / TypeScript with Webpack), including the internal Angular component library MUESLI integrated from Figma mockups. Worked within the \"Commercial Activity\" Squad (4 developers, 2 Business Analysts, 1 Product Owner) in the \"Employee Distribution\" Tribe, under the Agile Spotify model. Formed part of an autonomous \"Application Unit\" covering the entire front-end and back-end scope. Monthly delivery cadence driven by Agile ceremonies in Jira, actively facilitated via Klaxoon and Microsoft Teams. Tracked code quality with SonarQube, managed artifacts with JFrog / Artifactory / Nexus, containerized with Docker, packaged applications with Helm, and ran continuous GitOps deployment via Argo CD with GitLab CI / Jenkins. Collaborated with infrastructure teams (CAGIP) for multi-environment deliveries."
     },
     "2023_2025": {
       "title": "Backend developer",
-      "shortDescription": "Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management.",
-      "description": "Crédit Agricole Titres: Java Spring Boot application with a JSP front end. Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management."
+      "shortDescription": "Corrective and evolutive maintenance of a financial securities management platform run under a V-model cycle. High-complexity project with strong business constraints. Existing J2EE/JSP front-end alongside a parallel graphic redesign project in Angular, with a Java Spring Boot back-end.",
+      "description": "Handled evolutions and corrections on the asset management platform (equities, mutual funds/OPC) for professional and retail clients. Application ecosystem combining modern components (Angular 18, HTML / CSS, Java 21 / Spring Boot with Maven), alongside legacy modules (J2EE, JSP). Tracked and prepared production releases across Development, Pre-production and Production environments. UAT testing in Squash TM with a dedicated test team. Worked within a rigorous V-model cycle."
     },
     "2021_2023": {
       "title": "Full-stack developer",
-      "shortDescription": "UX redesign of the incident reporting tool used for railway lines, both at stations and on board trains.",
-      "description": "Maintenance, evolution and corrective work on the SNCF incident reporting form. Application with strong ergonomic issues as users are stressed, work at night and are not IT professionals. The interface allows audio or textual entry of incidents on lines to display upcoming interruptions or slowdowns at stations, on board trains or on networks. Complete redesign on a one-page application. Feasibility study to migrate from AngularJS to Angular 16. Agile project with 2-6 developers with Scrum master, Product owner and product manager."
+      "shortDescription": "Full redesign and evolution of the critical tool used to report and broadcast passenger incidents. First project with a classic front-end / back-end structure (AngularJS / Java Spring Boot), with major ergonomic issues and visual redesign work.",
+      "description": "Major involvement in the central incident reporting tool (RATP/SNCF) for real-time broadcast on displays (yellow boards) and digital media. Split and integrated interfaces in AngularJS, graphic redesign aligned with the SNCF Connect brand guidelines from Figma mockups. Optimized ergonomics for users under stress (advanced autocomplete, smart input, moving from a multi-step wizard to a one-page form). Feasibility study for the migration to Angular 14. Managed deliveries across Development, Pre-production and Production environments. Supported the dedicated Ops team through the Move to Cloud transition to Microsoft Azure. Agile organization (Scrum) with Jira, Confluence and Microsoft Teams, quality assurance via Squash TM (working with a dedicated validation team) and a CI/CD chain (Jenkins, GitLab, Nexus, SonarQube)."
     },
     "2018_2021": {
       "title": "Big Data Developer",
-      "shortDescription": "Corrective maintenance and evolution of SNCF's technical monitoring stack.",
-      "description": "Development of a proof-of-concept application for display recognition in train stations and onboard trains using TensorFlow. In parallel, work as a big data developer on the monitoring component of SNCF applications using ELK. The objective is to provide both operational and technical indicators. Use of Google Analytics with a .NET component to create additional indicators such as traffic on SNCF media. Development of non-native plugins on Kibana. Agile project in a team of 4 to 6 developers with Scrum master, Product owner and product manager."
+      "shortDescription": "Corrective and evolutive maintenance of a centralized monitoring solution (ELK stack, Datadog, Grafana) for Transilien network equipment. Delivered targeted AngularJS developments (Kibana source code), Grok-based Logstash parsing, an autonomous AI module, and multi-environment deployment tracking.",
+      "description": "Monitored all equipment and application components deployed at stations and on board trains. Collected logs and administered their parsing. Deployed the ELK stack (Elasticsearch, Logstash, Kibana), wrote Grok log-parsing filters, built native and custom dashboards in Kibana, and integrated Datadog metrics. Developed dedicated AngularJS plugins, tested with Karma and Jasmine. Managed versioning and code branches with GitKraken. Built a .NET Core back-end component to process complex algorithms and query APIs (Google Analytics). Independently designed a Proof of Concept (POC) in Python / TensorFlow to automate visual recognition of station and train displays in order to detect anomalies. Tracked deployments across Development, Pre-production and Production environments. Project run in an Agile framework (Kanban/Scrum) with Jira and Confluence, supported by Microsoft Teams for daily communication, a CI/CD chain (Jenkins, GitLab) and quality control (SonarQube)."
     },
     "2018": {
       "title": "Web Developer",
-      "shortDescription": "Development of an internal application using JHipster.",
-      "description": "Development of a JHipster application with learning of versioning basics. The objective is to set up an internal gaming tournament application as part of corporate life. Developer intern in the innovation department."
+      "shortDescription": "Contributed to the development of an internal tournament management application within the innovation department. Learned application scaffolding with JHipster, Java unit testing, and collaborative development best practices with Git.",
+      "description": "Learned and used the JHipster framework (Java / Spring Boot) to structure and speed up the creation of an internal tournament application. Wrote unit tests with JUnit and Mockito to prevent regressions. Joined a technical team (one Tech Lead and two senior developers) to get introduced to enterprise working methods. Team communication via Microsoft Teams and Outlook. Daily introduction and application of version control and code collaboration best practices with Git."
     }
   },
   "education": {
