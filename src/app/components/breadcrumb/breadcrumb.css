@@ -134,27 +134,42 @@
   }
 }
 
-/* Responsive: Mobile (< 1024px) */
+/* Responsive: Mobile (< 1024px) — barre d'onglets pleine largeur, icone au-dessus du libelle */
 @media (max-width: 1024px) {
   .breadcrumb {
-    padding: 10px 15px;
-    min-height: 55px;
+    padding: 6px 8px;
+    min-height: auto;
+  }
+
+  .breadcrumb-wrapper {
+    gap: 0;
   }
 
   .breadcrumb-container {
-    gap: 5px;
+    width: 100%;
+    gap: 4px;
+    flex-wrap: nowrap;
   }
 
   .breadcrumb-item {
-    font-size: 0.65rem;
-    padding: var(--pad-nav-compact);
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 4px;
+    font-size: 0.62rem;
+    text-transform: none;
+    letter-spacing: 0;
+    border-radius: 14px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .breadcrumb-icon {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 
   .breadcrumb-separator {
-    font-size: 0.7rem;
+    display: none;
   }
 }

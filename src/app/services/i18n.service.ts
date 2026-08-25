@@ -7,12 +7,17 @@ export type Lang = 'en' | 'fr';
 export class I18nService {
   private readonly http = inject(HttpClient);
 
-  readonly currentLanguage = signal<Lang>('en');
+  readonly currentLanguage = signal<Lang>(this.detectBrowserLanguage());
   private readonly translations = signal<Partial<Record<Lang, any>>>({});
   private readonly loadedLangs = new Set<Lang>();
 
   constructor() {
-    this.loadLanguage('en');
+    this.loadLanguage(this.currentLanguage());
+  }
+
+  private detectBrowserLanguage(): Lang {
+    const browserLang = typeof navigator !== 'undefined' ? navigator.language : '';
+    return browserLang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
   }
 
   changeLanguage(lang: Lang): void {

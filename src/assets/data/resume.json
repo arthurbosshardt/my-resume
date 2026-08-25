@@ -1,9 +1,9 @@
 {
   "personal": {
     "name": "Arthur BOSSHARDT",
-    "age": 27,
+    "birthDate": "1998-11-19",
     "location": "France",
-    "role": "Full-stack developer",
+    "role": "Web developer",
     "contact": {
       "phone": "+33 6 37 60 12 77",
       "email": "arthur.bosshardt@gmail.com"
@@ -20,7 +20,8 @@
         {
           "client": "Crédit Agricole Technologies & Services",
           "technologies": ["NodeJS", "Angular 22", "Copilot"],
-          "description": "Member of the Frontend Chapter, I support squads by providing expertise in Node.js and Angular 22. Currently working with the commercial squad in charge of the selfcare journey enabling SMEs (TPE) to subscribe to contracts on-site and remotely, including management of the various options. Heavy use of GitHub Copilot."
+          "shortDescription": "Cross-functional (Spotify) chapter, self-service journey for subscribing to a payment solution (CAWL).",
+          "description": "Member of a cross-functional chapter (Spotify model) at Crédit Agricole, developing Node.js and Angular applications. Currently working on the self-service (selfcare) journey for subscribing to the CAWL payment solution."
         }
       ]
     },
@@ -33,20 +34,22 @@
         {
           "client": "Crédit Agricole Technologies & Services",
           "technologies": ["Java", "Springboot", "Maven","HTML", "CSS", "Javascript", "PostgreSQL", "SQL", "Copilot", "Elasticsearch", "Kibana", "Logstash", "AWS", "Sonarqube", "Helm", "Kubernetes", "ArgoCD", "Jenkins", "Jira", "Gitlab", "JUnit", "Mockito"],
-          "description": "Project for managing reports for Crédit Agricole sales representatives, allowing them to manage their commercial activity reports and capitalize on their prospecting. Organization by application unit, very sectorized. Addition of many features to facilitate the sales representative's work. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
+          "shortDescription": "Internal application for sales representatives to report and manage their activities in order to qualify for a performance bonus.",
+          "description": "Internal application for Crédit Agricole sales representatives to report and manage their commercial activities in order to qualify for a performance bonus. Organization by application unit, very sectorized. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
         }
       ]
     },
     {
       "period": "2023 - 2025",
-      "title": "Full-stack developer",
+      "title": "Backend developer",
       "company": "Qim Info",
       "location": "Annecy",
       "projects": [
         {
           "client": "Crédit Agricole Titres",
-          "technologies": ["Java", "Springboot", "Maven", "HTML", "CSS", "Angular", "Typescript", "JSP", "JEE", "Nexus", "ArgoCD", "Sonarqube", "Jenkins", "Jira", "Confluence", "Gitlab CI/CD", "JUnit", "Mockito"],
-          "description": "Business context around stock market and portfolio management. Existing project with Java JEE and Springboot as well as ergonomic redesign project in Angular 18 and mobile application. Very dense but very interesting business context with tribe-based organization, projects are V-cycle but a transition to Agile is desired and now effective."
+          "technologies": ["Java", "Springboot", "Maven", "HTML", "CSS", "JSP", "JEE", "Nexus", "ArgoCD", "Sonarqube", "Jenkins", "Jira", "Confluence", "Gitlab CI/CD", "JUnit", "Mockito"],
+          "shortDescription": "Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management.",
+          "description": "Crédit Agricole Titres: Java Spring Boot application with a JSP front end. Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management."
         }
       ]
     },
@@ -59,6 +62,7 @@
         {
           "client": "SNCF",
           "technologies": ["Java", "Springboot", "Maven", "AngularJS", "Angular", "Typescript", "Nexus", "Sonarqube", "Jenkins", "Jira", "Confluence", "Azure", "Gitlab CI/CD", "JUnit", "Mockito", "Karma"],
+          "shortDescription": "UX redesign of the incident reporting tool used for railway lines, both at stations and on board trains.",
           "description": "Maintenance, evolution and corrective work on the SNCF incident reporting form. Application with strong ergonomic issues as users are stressed, work at night and are not IT professionals. The interface allows audio or textual entry of incidents on lines to display upcoming interruptions or slowdowns at stations, on board trains or on networks. Complete redesign on a one-page application. Feasibility study to migrate from AngularJS to Angular 16. Agile project with 2-6 developers with Scrum master, Product owner and product manager."
         }
       ]
@@ -71,8 +75,9 @@
       "projects": [
         {
           "client": "SNCF",
-          "technologies": ["Elasticsearch", "Kibana", "Logstash", "Grok pattern", "AngularJS", ".NET", "C#", "Python", "Google Analytics"],
-          "description": "Development of an application for display recognition in train stations and onboard trains. In parallel, work as a big data developer on the monitoring component of SNCF applications using ELK. The objective is to provide both operational and technical indicators. Use of Google Analytics with a .NET component to create additional indicators such as traffic on SNCF media. Development of non-native plugins on Kibana. Agile project in a team of 4 to 6 developers with Scrum master, Product owner and product manager."
+          "technologies": ["Elasticsearch", "Kibana", "Logstash", "Grok pattern", "AngularJS", ".NET", "C#", "Python", "Google Analytics", "TensorFlow"],
+          "shortDescription": "Corrective maintenance and evolution of SNCF's technical monitoring stack.",
+          "description": "Development of a proof-of-concept application for display recognition in train stations and onboard trains using TensorFlow. In parallel, work as a big data developer on the monitoring component of SNCF applications using ELK. The objective is to provide both operational and technical indicators. Use of Google Analytics with a .NET component to create additional indicators such as traffic on SNCF media. Development of non-native plugins on Kibana. Agile project in a team of 4 to 6 developers with Scrum master, Product owner and product manager."
         }
       ]
     },
@@ -85,6 +90,7 @@
         {
           "client": "Internal",
           "technologies": ["JHipster", "Github", "Angular", "Typescript", "Springboot"],
+          "shortDescription": "Development of an internal application using JHipster.",
           "description": "Development of a JHipster application with learning of versioning basics. The objective is to set up an internal gaming tournament application as part of corporate life. Developer intern in the innovation department."
         }
       ]
@@ -92,38 +98,32 @@
   ],
   "education": [
     {
-      "period": "2026",
-      "title": "React framework courses",
-      "location": "Remote",
-      "description": "Courses about React framework as IT web and mobile developer.",
-      "upcoming": true
-    },
-    {
-      "period": "2024",
-      "title": "Angular framework courses",
-      "location": "Remote",
-      "description": "Courses about Angular framework with Orsys."
-    },
-    {
       "period": "2022",
       "title": "SCRUM Master Certification",
       "location": "Remote",
-      "description": "PSM I - Professional Scrum Master 1 Scrum.org."
+      "description": "PSM I - Professional Scrum Master 1 Scrum.org.",
+      "longDescription": "Professional Scrum Master I (PSM I) certification delivered by Scrum.org, validating a solid understanding of Scrum framework fundamentals: roles, events, and artifacts, as well as the underlying Agile values and principles. This certification reinforced my ability to facilitate Scrum ceremonies, remove blockers for the development team, and support product owners in maximizing delivered value."
     },
     {
       "period": "2019 - 2021",
       "title": "Master's Degree EPSI School - Nantes",
-      "description": "RNCP Level 7 Certification - Expert in IT and Information Systems. Work-study program at Capgemini (3 weeks / 1 week). Project management, software engineering, Big Data & AI specialization, thesis on technical monitoring."
+      "location": "Nantes",
+      "description": "RNCP Level 7 Certification - Expert in IT and Information Systems. Work-study program at Capgemini (3 weeks / 1 week). Project management, software engineering, Big Data & AI specialization, thesis on technical monitoring.",
+      "longDescription": "RNCP Level 7 certified Master's degree (Expert in IT and Information Systems) completed via a work-study program at Capgemini (3 weeks in the company, 1 week at school). The curriculum combined project management, software engineering, and a Big Data & AI specialization, culminating in a thesis on technical monitoring. This program was my first deep dive into large-scale enterprise software delivery, agile project governance, and applied data engineering practices."
     },
     {
       "period": "2018 - 2019",
       "title": "Professional Bachelor's Degree MIAR - Nantes",
-      "description": "Work-study program at Capgemini (3 weeks / 1 week). Object-oriented programming, Mobile development, Client/Server Web, Development tools, Distributed programming..."
+      "location": "Nantes",
+      "description": "Work-study program at Capgemini (3 weeks / 1 week). Object-oriented programming, Mobile development, Client/Server Web, Development tools, Distributed programming...",
+      "longDescription": "Professional Bachelor's degree in MIAR (Web and Mobile Applications and Networks Engineering), completed via a work-study program at Capgemini (3 weeks in the company, 1 week at school). Coursework covered object-oriented programming, mobile development, client/server web architectures, development tooling, and distributed programming, building the technical foundation for full-stack development."
     },
     {
       "period": "2016 - 2018",
       "title": "DUT in Computer Science - Nantes",
-      "description": "IT modules (web development, databases, networks). General education (English, law, accounting, project management)."
+      "location": "Nantes",
+      "description": "IT modules (web development, databases, networks). General education (English, law, accounting, project management).",
+      "longDescription": "University Diploma in Computer Science (DUT), combining core IT modules — web development, databases, and networking — with a general education in English, law, accounting, and project management. This two-year program built the broad technical and professional foundation on which the rest of my career has been built."
     }
   ],
   "skills": {
@@ -157,7 +157,8 @@
         "C#",
         "Liquibase",
         "Grafana",
-        "Datadog"
+        "Datadog",
+        "Github Copilot"
       ],
       "softwares": [
         "VSCode",
@@ -174,12 +175,14 @@
         "Google Office",
         "Postman",
         "Copilot",
+        "Claude",
         "Slack",
         "Discord"
       ],
       "ai": [
         "Copilot",
         "Cursor",
+        "Claude",
         "Perplexity",
         "ChatGPT",
         "Gemini",
@@ -193,7 +196,8 @@
         "Confluence",
         "Github",
         "Gitlab",
-        "Gitkraken"
+        "Gitkraken",
+        "Klaxoon"
       ],
       "testing": [
         "Unit testing",
@@ -246,7 +250,8 @@
       "Swagger",
       "Burndown chart",
       "Macro sizing shirt size",
-      "Code review"
+      "Code review",
+      "AI awareness and theory on the use of AI"
     ],
     "languages": [
       {
@@ -265,14 +270,8 @@
       {
         "name": "Spanish",
         "level": "Basics",
-        "communication": "Intermediate",
+        "communication": "Basics",
         "understanding": "Intermediate"
-      },
-      {
-        "name": "Mandarin",
-        "level": "Basics",
-        "communication": "School basics",
-        "understanding": "School basics"
       }
     ]
   }

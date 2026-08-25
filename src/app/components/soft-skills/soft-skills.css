@@ -62,9 +62,13 @@
 
 .languages-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 0;
+}
+
+.language-card {
+  padding: var(--space-4);
 }
 
 /* Responsive: 4K (2561px+) */
@@ -197,12 +201,12 @@
 @media (max-width: 1024px) {
   .soft-skills-section {
     padding: 15px 15px;
-    padding-top: 20px;
   }
 
   .soft-skills-grid {
     gap: 12px;
-    padding-top: 15px;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .skills-category {
@@ -257,6 +261,17 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.language-code-badge {
+  background: #cc553e;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .language-name {

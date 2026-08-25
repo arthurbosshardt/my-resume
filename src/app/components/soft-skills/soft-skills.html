@@ -35,11 +35,9 @@
       </h3>
       <div class="languages-grid languages-full-width">
         @for (lang of skills()!.languages; track lang.name) {
-          <div class="language-item">
+          <div class="technical-subcategory language-card">
             <div class="language-name-level">
-              @if (getLanguageFlag(lang.name); as flag) {
-                <span [title]="lang.name">{{ flag }}</span>
-              }
+              <span class="language-code-badge">{{ getLanguageCode(lang.name) }}</span>
               <span class="language-name">{{ lang.name }}</span>
               <span class="language-level"> - {{ getLevel(lang.level) }}</span>
             </div>

@@ -44,14 +44,6 @@
     font-size: 0.85rem;
   }
 
-  .sort-button {
-    font-size: 0.85rem;
-  }
-
-  .sort-tooltip {
-    font-size: 0.7rem;
-  }
-
   .skills-tags {
     gap: 8px;
     margin-top: 10px;
@@ -106,7 +98,7 @@
 @media (max-width: 1024px) {
   .skills-section {
     padding: 15px 15px;
-    padding-top: 20px;
+    padding-top: 0;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
@@ -114,7 +106,8 @@
 
   .technical-categories-grid {
     gap: 12px;
-    padding-top: 15px;
+    margin-top: 0;
+    padding-top: 0;
     overflow-y: visible;
     overflow-x: hidden;
   }
@@ -129,14 +122,6 @@
 
   .subcategory-icon {
     font-size: 0.7rem;
-  }
-
-  .sort-button {
-    font-size: 0.7rem;
-  }
-
-  .sort-tooltip {
-    font-size: 0.6rem;
   }
 
   .skills-tags {
@@ -180,34 +165,6 @@
 .subcategory-icon {
   font-size: 0.75rem;
   color: #cc553e;
-}
-
-.sort-button {
-  background: none;
-  border: none;
-  color: #cc553e;
-  cursor: pointer;
-  padding: var(--space-1);
-  border-radius: 4px;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  font-size: 0.75rem;
-  margin-left: 4px;
-}
-
-.sort-button:hover {
-  background: rgba(204, 85, 62, 0.1);
-  transform: scale(1.1);
-}
-
-.sort-tooltip {
-  font-size: 0.65rem;
-  color: #999;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-left: 2px;
 }
 
 .skills-tags {

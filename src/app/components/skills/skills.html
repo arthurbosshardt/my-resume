@@ -8,26 +8,11 @@
               <h4 class="subcategory-title">
                 <i class="fa-solid fa-code subcategory-icon"></i>
                 {{ i18n.t('skills.languagesFrameworks') }}
-                <button class="sort-button" (click)="toggleSort('languagesFrameworks')">
-                  @if (getSortOrder('languagesFrameworks') === 'alphabetical') {
-                    <i class="fa-solid fa-arrow-down-a-z"></i>
-                  } @else {
-                    <i class="fa-solid fa-arrow-down-wide-short"></i>
-                  }
-                </button>
-                <span class="sort-tooltip">
-                  ({{ getSortOrder('languagesFrameworks') === 'alphabetical' ? i18n.t('skills.alphabetical') : i18n.t('skills.byMastery') }})
-                </span>
               </h4>
             </div>
             <div class="skills-tags">
-              @for (skill of sortSkills(skills()!.languagesFrameworks, 'languagesFrameworks'); track skill; let i = $index) {
-                <span
-                  class="skill-tag"
-                  [style.opacity]="getOpacity(i, sortSkills(skills()!.languagesFrameworks, 'languagesFrameworks').length, 'languagesFrameworks')"
-                >
-                  {{ skill }}
-                </span>
+              @for (skill of sortAlphabetically(skills()!.languagesFrameworks); track skill) {
+                <span class="skill-tag">{{ skill }}</span>
               }
             </div>
           </div>

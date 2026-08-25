@@ -1,25 +1,58 @@
 <section class="education-section">
   <div class="education-list">
     @for (edu of sortedEducation; track edu.period + edu.title) {
-      <div class="education-item">
-        <div class="education-period">{{ edu.period }}</div>
-        <div class="education-content">
-          <div class="education-title-row">
-            @if (edu.upcoming) {
-              <span class="upcoming-badge">{{ i18n.t('education.upcoming') }}</span>
-            }
-            <div class="education-school-info">
-              <i class="fa-solid fa-graduation-cap school-icon"></i>
-              <h3 class="education-title">{{ getSchoolName(edu) }}</h3>
-            </div>
-            @if (getLocation(edu); as location) {
-              <div class="education-location-info">
-                <i class="fa-solid fa-location-dot location-icon"></i>
-                <span class="education-location">{{ location }}</span>
+      <div
+        class="flip-card education-flip-card"
+        [class.is-flipped]="isFlipped(edu)"
+        role="button"
+        tabindex="0"
+        [attr.aria-pressed]="isFlipped(edu)"
+        [attr.aria-label]="getSchoolName(edu) + ' — ' + i18n.t('common.flipCard')"
+        (click)="toggleFlip(edu)"
+        (keydown.enter)="toggleFlip(edu)"
+        (keydown.space)="toggleFlip(edu)"
+      >
+        <div class="flip-card-inner">
+          <div class="flip-card-face education-item">
+            <div class="education-front">
+              <div class="education-period">{{ edu.period }}</div>
+              <div class="education-content">
+                <div class="education-title-row">
+                  @if (edu.upcoming) {
+                    <span class="upcoming-badge">{{ i18n.t('education.upcoming') }}</span>
+                  }
+                  <div class="education-school-info">
+                    <i class="fa-solid fa-graduation-cap school-icon"></i>
+                    <h3 class="education-title">{{ getSchoolName(edu) }}</h3>
+                  </div>
+                  @if (getLocation(edu); as location) {
+                    <div class="education-location-info">
+                      <i class="fa-solid fa-location-dot location-icon"></i>
+                      <span class="education-location">{{ location }}</span>
+                    </div>
+                  }
+                </div>
+                <p class="education-description" [innerHTML]="getDescription(edu)"></p>
               </div>
-            }
+            </div>
+            <div class="flip-hint">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              {{ i18n.t('common.flipHint') }}
+            </div>
           </div>
-          <p class="education-description" [innerHTML]="getDescription(edu)"></p>
+          <div class="flip-card-face flip-card-back education-item">
+            <div class="education-back-header">
+              <div class="education-school-info">
+                <i class="fa-solid fa-graduation-cap school-icon"></i>
+                <h3 class="education-title">{{ getSchoolName(edu) }}</h3>
+              </div>
+            </div>
+            <p class="education-description" [innerHTML]="getLongDescription(edu)"></p>
+            <div class="flip-hint">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+              {{ i18n.t('common.flipHintBack') }}
+            </div>
+          </div>
         </div>
       </div>
     }

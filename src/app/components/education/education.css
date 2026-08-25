@@ -9,7 +9,7 @@
   padding-bottom: 20px;
 }
 
-.education-item {
+.education-front {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -61,6 +61,14 @@
   gap: 8px;
 }
 
+.education-back-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
 .school-icon {
   font-size: 1.1rem;
   color: #cc553e;
@@ -105,7 +113,7 @@
     padding-bottom: 25px;
   }
 
-  .education-item {
+  .education-front {
     gap: 25px;
   }
 
@@ -126,10 +134,6 @@
     font-size: 1.05rem;
   }
 
-  .education-item {
-    padding: 25px;
-  }
-
   .school-icon {
     font-size: 1.3rem;
   }
@@ -142,7 +146,7 @@
     padding-bottom: 22px;
   }
 
-  .education-item {
+  .education-front {
     gap: 22px;
   }
 
@@ -163,10 +167,6 @@
     font-size: 1rem;
   }
 
-  .education-item {
-    padding: 22px;
-  }
-
   .school-icon {
     font-size: 1.2rem;
   }
@@ -174,12 +174,13 @@
 
 /* Responsive: Mobile (< 1024px) */
 @media (max-width: 1024px) {
-  .education-item {
+  .education-front {
     flex-direction: column;
     gap: 15px;
   }
 
-  .education-title-row {
+  .education-title-row,
+  .education-back-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;

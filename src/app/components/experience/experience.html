@@ -1,49 +1,84 @@
 <section class="experience-section">
   <div class="experience-list">
     @for (exp of sortedExperience; track exp.period + exp.title) {
-      <div class="experience-item">
-        <div class="experience-header">
-          <div class="experience-title-row">
-            <div class="experience-period">{{ exp.period }}</div>
-            @if (exp.current) {
-              <span class="current-badge">{{ i18n.t('experience.currentPosition') }}</span>
-            }
-            <h3 class="experience-title">{{ getTitle(exp) }}</h3>
-            <span class="experience-separator">•</span>
-            <div class="experience-company-info">
-              <i class="fa-solid fa-building company-icon"></i>
-              <span class="experience-company">{{ exp.company }}</span>
+      <div
+        class="flip-card experience-flip-card"
+        [class.is-flipped]="isFlipped(exp)"
+        role="button"
+        tabindex="0"
+        [attr.aria-pressed]="isFlipped(exp)"
+        [attr.aria-label]="getTitle(exp) + ' — ' + i18n.t('common.flipCard')"
+        (click)="toggleFlip(exp)"
+        (keydown.enter)="toggleFlip(exp)"
+        (keydown.space)="toggleFlip(exp)"
+      >
+        <div class="flip-card-inner">
+          <div class="flip-card-face experience-item">
+            <div class="experience-header">
+              <div class="experience-title-row">
+                <div class="experience-period">{{ exp.period }}</div>
+                @if (exp.current) {
+                  <span class="current-badge">{{ i18n.t('experience.currentPosition') }}</span>
+                }
+                <h3 class="experience-title">{{ getTitle(exp) }}</h3>
+                <span class="experience-separator">•</span>
+                <div class="experience-company-info">
+                  <i class="fa-solid fa-building company-icon"></i>
+                  <span class="experience-company">{{ exp.company }}</span>
+                </div>
+                @if (exp.projects && exp.projects.length > 0 && exp.projects[0].client) {
+                  <span class="experience-separator">•</span>
+                  <div class="experience-client-info">
+                    <i class="fa-solid fa-user-tie client-icon"></i>
+                    <span class="experience-client">{{ exp.projects[0].client }}</span>
+                  </div>
+                }
+                <span class="experience-separator">•</span>
+                <div class="experience-location-info">
+                  <i class="fa-solid fa-location-dot location-icon"></i>
+                  <span class="experience-location">{{ getLocation(exp) }}</span>
+                </div>
+              </div>
             </div>
-            @if (exp.projects && exp.projects.length > 0 && exp.projects[0].client) {
-              <span class="experience-separator">•</span>
-              <div class="experience-client-info">
-                <i class="fa-solid fa-user-tie client-icon"></i>
-                <span class="experience-client">{{ exp.projects[0].client }}</span>
+            @for (project of exp.projects; track project.description) {
+              <p class="project-description">{{ getShortDescription(exp, project) }}</p>
+              <div class="project-technologies-tags">
+                @for (tech of getSortedTechnologies(project); track tech) {
+                  <span
+                    class="skill-tag clickable-skill-tag"
+                    (click)="onTechnologyClick($event)"
+                    style="cursor: pointer"
+                  >
+                    @if (getTechIcon(tech); as icon) {
+                      <i class="{{ icon }} tech-tag-icon"></i>
+                    }
+                    {{ tech }}
+                  </span>
+                }
               </div>
             }
-            <span class="experience-separator">•</span>
-            <div class="experience-location-info">
-              <i class="fa-solid fa-location-dot location-icon"></i>
-              <span class="experience-location">{{ exp.location }}</span>
+            <div class="flip-hint">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              {{ i18n.t('common.flipHint') }}
+            </div>
+          </div>
+          <div class="flip-card-face flip-card-back experience-item">
+            <div class="experience-header">
+              <div class="experience-title-row">
+                <h3 class="experience-title">{{ getTitle(exp) }}</h3>
+              </div>
+            </div>
+            @for (project of exp.projects; track project.description) {
+              <div class="project-item">
+                <p class="project-description" [innerHTML]="getDescription(exp, project.description)"></p>
+              </div>
+            }
+            <div class="flip-hint">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+              {{ i18n.t('common.flipHintBack') }}
             </div>
           </div>
         </div>
-        @for (project of exp.projects; track project.description) {
-          <div class="project-item">
-            <p class="project-description" [innerHTML]="getDescription(exp, project.description)"></p>
-            <div class="project-technologies-tags">
-              @for (tech of project.technologies; track tech) {
-                <span
-                  class="skill-tag clickable-skill-tag"
-                  (click)="onTechnologyClick()"
-                  style="cursor: pointer"
-                >
-                  {{ tech }}
-                </span>
-              }
-            </div>
-          </div>
-        }
       </div>
     }
   </div>

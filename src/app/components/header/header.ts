@@ -1,6 +1,7 @@
 import { Component, inject, input, output, signal } from '@angular/core';
 import { I18nService, Lang } from '../../services/i18n.service';
 import { Personal } from '../../models/resume.model';
+import { formatLocation, calculateAge } from '../../utils/helpers';
 
 @Component({
   selector: 'app-header',
@@ -26,5 +27,21 @@ export class Header {
       return phone.replace('+33 6', '06');
     }
     return phone;
+  }
+
+  getLocation(): string {
+    return formatLocation('Vannes', this.currentLanguage());
+  }
+
+  getAge(): number {
+    return calculateAge(this.personal().birthDate);
+  }
+
+  getFirstName(): string {
+    return this.personal().name.split(' ')[0];
+  }
+
+  getLastName(): string {
+    return this.personal().name.split(' ').slice(1).join(' ');
   }
 }

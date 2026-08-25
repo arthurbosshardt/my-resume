@@ -114,6 +114,12 @@
   transition: all 0.2s ease;
 }
 
+.tech-tag-icon {
+  color: #cc553e;
+  margin-right: 6px;
+  font-size: 0.85em;
+}
+
 .clickable-skill-tag:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -153,10 +159,6 @@
   .project-description {
     font-size: 1.05rem;
   }
-
-  .experience-item {
-    padding: 25px;
-  }
 }
 
 /* Responsive: 2K (1921px - 2560px) */
@@ -183,10 +185,6 @@
 
   .project-description {
     font-size: 1rem;
-  }
-
-  .experience-item {
-    padding: 22px;
   }
 }
 
@@ -222,9 +220,5 @@
 
   .project-description {
     font-size: 0.9rem;
-  }
-
-  .experience-item {
-    padding: 15px;
   }
 }

@@ -5,7 +5,7 @@ export interface Contact {
 
 export interface Personal {
   name: string;
-  age: number;
+  birthDate: string;
   location: string;
   role: string;
   contact: Contact;
@@ -14,6 +14,7 @@ export interface Personal {
 export interface Project {
   client: string;
   technologies: string[];
+  shortDescription: string;
   description: string;
 }
 
@@ -31,6 +32,7 @@ export interface Education {
   title: string;
   location?: string;
   description: string;
+  longDescription: string;
   upcoming?: boolean;
 }
 

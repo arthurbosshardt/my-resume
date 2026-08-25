@@ -34,7 +34,7 @@
                 <app-skills [skills]="data.skills.technical" />
               }
               @default {
-                <app-experience [experience]="data.experience" (sectionChange)="onSectionChange($event)" />
+                <app-experience [experience]="data.experience" [skills]="data.skills" (sectionChange)="onSectionChange($event)" />
               }
             }
           </div>

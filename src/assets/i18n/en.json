@@ -2,7 +2,8 @@
   "header": {
     "yearsOld": "years old",
     "location": "Vannes 56000 - France",
-    "role": "Full-stack developer - Seeking opportunities in and around Vannes (France) or full remote"
+    "role": "Web developer",
+    "roleLocation": "based in Vannes or remote"
   },
   "breadcrumb": {
     "professionalExperience": "Experience",
@@ -22,8 +23,6 @@
     "languages": "Languages",
     "communication": "Communication",
     "understanding": "Understanding",
-    "alphabetical": "Alphabetical",
-    "byMastery": "By mastery",
     "levels": {
       "Native": "Native",
       "Fluent": "Fluent",
@@ -44,60 +43,65 @@
     }
   },
   "common": {
-    "remote": "Remote"
+    "remote": "Remote",
+    "flipCard": "flip card",
+    "flipHint": "Click for more details",
+    "flipHintBack": "Click to go back"
   },
   "experience": {
     "currentPosition": "Current position",
     "2026": {
       "title": "Frontend developer",
-      "description": "Member of the Frontend Chapter, I support squads by providing expertise in Node.js and Angular 22. Currently working with the commercial squad in charge of the selfcare journey enabling SMEs (TPE) to subscribe to contracts on-site and remotely, including management of the various options. Heavy use of GitHub Copilot."
+      "shortDescription": "Cross-functional (Spotify) chapter, self-service journey for subscribing to a payment solution (CAWL).",
+      "description": "Member of a cross-functional chapter (Spotify model) at Crédit Agricole, developing Node.js and Angular applications. Currently working on the self-service (selfcare) journey for subscribing to the CAWL payment solution."
     },
     "2025_2026": {
       "title": "Full-stack developer",
-      "description": "Project for managing reports for Crédit Agricole sales representatives, allowing them to manage their commercial activity reports and capitalize on their prospecting. Organization by application unit, very sectorized. Addition of many features to facilitate the sales representative's work. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
+      "shortDescription": "Internal application for sales representatives to report and manage their activities in order to qualify for a performance bonus.",
+      "description": "Internal application for Crédit Agricole sales representatives to report and manage their commercial activities in order to qualify for a performance bonus. Organization by application unit, very sectorized. Front end with native technologies and Java Spring Boot back end. Implementation of ELK dashboard to create business indicators. Agile project with 4 to 6 developers, 2 business analysts and a product owner."
     },
     "2023_2025": {
-      "title": "Full-stack developer",
-      "description": "Business context around stock market and portfolio management. Existing project with Java JEE and Spring Boot as well as ergonomic redesign project in Angular 18 and mobile application. Very dense but very interesting business context with tribe-based organization, projects are V-cycle but a transition to Agile is desired and now effective."
+      "title": "Backend developer",
+      "shortDescription": "Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management.",
+      "description": "Crédit Agricole Titres: Java Spring Boot application with a JSP front end. Corrective and evolutive maintenance on stock market applications, covering securities and mutual fund (OPC) management."
     },
     "2021_2023": {
       "title": "Full-stack developer",
+      "shortDescription": "UX redesign of the incident reporting tool used for railway lines, both at stations and on board trains.",
       "description": "Maintenance, evolution and corrective work on the SNCF incident reporting form. Application with strong ergonomic issues as users are stressed, work at night and are not IT professionals. The interface allows audio or textual entry of incidents on lines to display upcoming interruptions or slowdowns at stations, on board trains or on networks. Complete redesign on a one-page application. Feasibility study to migrate from AngularJS to Angular 16. Agile project with 2-6 developers with Scrum master, Product owner and product manager."
     },
     "2018_2021": {
       "title": "Big Data Developer",
-      "description": "Development of an application for display recognition in train stations and onboard trains. In parallel, work as a big data developer on the monitoring component of SNCF applications using ELK. The objective is to provide both operational and technical indicators. Use of Google Analytics with a .NET component to create additional indicators such as traffic on SNCF media. Development of non-native plugins on Kibana. Agile project in a team of 4 to 6 developers with Scrum master, Product owner and product manager."
+      "shortDescription": "Corrective maintenance and evolution of SNCF's technical monitoring stack.",
+      "description": "Development of a proof-of-concept application for display recognition in train stations and onboard trains using TensorFlow. In parallel, work as a big data developer on the monitoring component of SNCF applications using ELK. The objective is to provide both operational and technical indicators. Use of Google Analytics with a .NET component to create additional indicators such as traffic on SNCF media. Development of non-native plugins on Kibana. Agile project in a team of 4 to 6 developers with Scrum master, Product owner and product manager."
     },
     "2018": {
       "title": "Web Developer",
+      "shortDescription": "Development of an internal application using JHipster.",
       "description": "Development of a JHipster application with learning of versioning basics. The objective is to set up an internal gaming tournament application as part of corporate life. Developer intern in the innovation department."
     }
   },
   "education": {
     "upcoming": "Upcoming",
-    "2026": {
-      "title": "React framework courses",
-      "description": "Courses about React framework as IT web and mobile developer."
-    },
-    "2024": {
-      "title": "Angular framework courses",
-      "description": "Courses about Angular framework with Orsys."
-    },
     "2022": {
       "title": "SCRUM Master Certification",
-      "description": "PSM I - Professional Scrum Master 1 Scrum.org."
+      "description": "PSM I - Professional Scrum Master 1 Scrum.org.",
+      "longDescription": "Professional Scrum Master I (PSM I) certification delivered by Scrum.org, validating a solid understanding of Scrum framework fundamentals: roles, events, and artifacts, as well as the underlying Agile values and principles. This certification reinforced my ability to facilitate Scrum ceremonies, remove blockers for the development team, and support product owners in maximizing delivered value."
     },
     "2019_2021": {
       "title": "Master's Degree at EPSI School",
-      "description": "RNCP Level 7 Certification - Expert in IT and Information Systems. Work-study program at Capgemini (3 weeks / 1 week). Project management, software engineering, Big Data & AI specialization, thesis on technical monitoring."
+      "description": "RNCP Level 7 Certification - Expert in IT and Information Systems. Work-study program at Capgemini (3 weeks / 1 week). Project management, software engineering, Big Data & AI specialization, thesis on technical monitoring.",
+      "longDescription": "RNCP Level 7 certified Master's degree (Expert in IT and Information Systems) completed via a work-study program at Capgemini (3 weeks in the company, 1 week at school). The curriculum combined project management, software engineering, and a Big Data & AI specialization, culminating in a thesis on technical monitoring. This program was my first deep dive into large-scale enterprise software delivery, agile project governance, and applied data engineering practices."
     },
     "2018_2019": {
       "title": "Professional Bachelor's Degree MIAR",
-      "description": "Work-study program at Capgemini (3 weeks / 1 week). Object-oriented programming, Mobile development, Client/Server Web, Development tools, Distributed programming..."
+      "description": "Work-study program at Capgemini (3 weeks / 1 week). Object-oriented programming, Mobile development, Client/Server Web, Development tools, Distributed programming...",
+      "longDescription": "Professional Bachelor's degree in MIAR (Web and Mobile Applications and Networks Engineering), completed via a work-study program at Capgemini (3 weeks in the company, 1 week at school). Coursework covered object-oriented programming, mobile development, client/server web architectures, development tooling, and distributed programming, building the technical foundation for full-stack development."
     },
     "2016_2018": {
       "title": "DUT in Computer Science",
-      "description": "IT modules (web development, databases, networks). General education (English, law, accounting, project management)."
+      "description": "IT modules (web development, databases, networks). General education (English, law, accounting, project management).",
+      "longDescription": "University Diploma in Computer Science (DUT), combining core IT modules — web development, databases, and networking — with a general education in English, law, accounting, and project management. This two-year program built the broad technical and professional foundation on which the rest of my career has been built."
     }
   },
   "pdf": {
