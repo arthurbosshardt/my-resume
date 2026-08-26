@@ -44,12 +44,12 @@
             </div>
             @if (lang.communication) {
               <div class="language-detail">
-                <span class="language-label-bold">{{ i18n.t('skills.communication') }}:</span> {{ getLevel(lang.communication) }}
+                <span class="language-label-bold">{{ i18n.t('skills.communication') }}:</span> {{ getFeminineLevel(lang.communication) }}
               </div>
             }
             @if (lang.understanding) {
               <div class="language-detail">
-                <span class="language-label-bold">{{ i18n.t('skills.understanding') }}:</span> {{ getLevel(lang.understanding) }}
+                <span class="language-label-bold">{{ i18n.t('skills.understanding') }}:</span> {{ getFeminineLevel(lang.understanding) }}
               </div>
             }
             @if (lang.certification) {

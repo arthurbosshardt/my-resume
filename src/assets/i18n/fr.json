@@ -36,6 +36,10 @@
       "Intermediate": "Intermédiaire",
       "School basics": "Bases scolaires"
     },
+    "levelsFeminine": {
+      "Native": "Native",
+      "Advanced": "Avancée"
+    },
     "softSkills": {
       "meetingFacilitation": "Animation de réunions (démos, rétrospective...)",
       "proactiveMindset": "Esprit proactif",

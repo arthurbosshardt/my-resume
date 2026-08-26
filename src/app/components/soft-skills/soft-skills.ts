@@ -46,6 +46,10 @@ export class SoftSkills {
     return this.i18n.t(`skills.levels.${level}`, level);
   }
 
+  getFeminineLevel(level: string): string {
+    return this.i18n.t(`skills.levelsFeminine.${level}`, this.getLevel(level));
+  }
+
   getCertification(certification: string): string {
     return certification.replace('TOEIC', '').trim();
   }
