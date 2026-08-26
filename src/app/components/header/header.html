@@ -22,10 +22,7 @@
         <p class="role">{{ i18n.t('header.role') }} <span class="role-location" [innerHTML]="i18n.t('header.roleLocation')"></span></p>
         <p class="age-location">
           <i class="fa-solid fa-cake-candles age-icon"></i>
-          {{ getAge() }} {{ i18n.t('header.yearsOld') }}
-          <span class="separator"> • </span>
-          <i class="fa-solid fa-location-dot location-icon"></i>
-          {{ getLocation() }}
+          {{ getAge() }} {{ i18n.t('header.yearsOld') }}<span class="separator"> . </span>{{ getLocation() }}
         </p>
       </div>
       <div class="header-right-links">
