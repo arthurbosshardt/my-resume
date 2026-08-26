@@ -47,7 +47,7 @@
 }
 
 .age-location {
-  gap: 0;
+  gap: 8px;
 }
 
 /* Colonne droite : liens de contact, avec sa propre grille de répartition */
@@ -76,10 +76,10 @@
   font-weight: bold;
 }
 
-.age-icon {
+.age-icon,
+.location-icon {
   font-size: 1rem;
   color: white;
-  margin-right: 6px;
 }
 
 .separator {
@@ -449,7 +449,8 @@
     flex-shrink: 0;
   }
 
-  .age-icon {
+  .age-icon,
+  .location-icon {
     font-size: 0.85rem;
   }
 
