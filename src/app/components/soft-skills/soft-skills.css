@@ -259,9 +259,16 @@
 }
 
 .language-flag {
-  font-size: 1.2rem;
   line-height: 1;
   flex-shrink: 0;
+  display: inline-flex;
+}
+
+.language-flag .flag-icon {
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  display: block;
 }
 
 .language-name {
