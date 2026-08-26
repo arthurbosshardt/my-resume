@@ -23,6 +23,11 @@
     "languages": "Languages",
     "communication": "Communication",
     "understanding": "Understanding",
+    "languageNames": {
+      "French": "French",
+      "English": "English",
+      "Spanish": "Spanish"
+    },
     "levels": {
       "Native": "Native",
       "Fluent": "Fluent",

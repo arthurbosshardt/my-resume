@@ -13,10 +13,10 @@ const SKILL_KEY_MAP: Record<string, string> = {
   'Pair programming': 'pairProgramming'
 };
 
-const CODE_MAP: Record<string, string> = {
-  French: 'FR',
-  English: 'EN',
-  Spanish: 'ES'
+const FLAG_MAP: Record<string, string> = {
+  French: '🇫🇷',
+  English: '🇬🇧',
+  Spanish: '🇪🇸'
 };
 
 @Component({
@@ -34,8 +34,12 @@ export class SoftSkills {
     return this.i18n.t(`skills.softSkills.${translationKey}`, skill);
   }
 
-  getLanguageCode(languageName: string): string {
-    return CODE_MAP[languageName] || languageName.slice(0, 2).toUpperCase();
+  getLanguageFlag(languageName: string): string {
+    return FLAG_MAP[languageName] || '';
+  }
+
+  getLanguageName(languageName: string): string {
+    return this.i18n.t(`skills.languageNames.${languageName}`, languageName);
   }
 
   getLevel(level: string): string {

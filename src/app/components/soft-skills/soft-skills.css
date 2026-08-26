@@ -258,14 +258,9 @@
   gap: 6px;
 }
 
-.language-code-badge {
-  background: #cc553e;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 2px 6px;
-  border-radius: 4px;
+.language-flag {
+  font-size: 1.2rem;
+  line-height: 1;
   flex-shrink: 0;
 }
 

@@ -23,11 +23,16 @@
     "languages": "Langues",
     "communication": "Communication",
     "understanding": "Compréhension",
+    "languageNames": {
+      "French": "Français",
+      "English": "Anglais",
+      "Spanish": "Espagnol"
+    },
     "levels": {
       "Native": "Natif",
       "Fluent": "Avancé",
       "Basics": "Bases",
-      "Advanced": "Avancé",
+      "Advanced": "Avancée",
       "Intermediate": "Intermédiaire",
       "School basics": "Bases scolaires"
     },

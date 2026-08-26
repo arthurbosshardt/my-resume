@@ -38,8 +38,8 @@
         @for (lang of skills()!.languages; track lang.name) {
           <div class="technical-subcategory language-card">
             <div class="language-name-level">
-              <span class="language-code-badge">{{ getLanguageCode(lang.name) }}</span>
-              <span class="language-name">{{ lang.name }}</span>
+              <span class="language-flag" aria-hidden="true">{{ getLanguageFlag(lang.name) }}</span>
+              <span class="language-name">{{ getLanguageName(lang.name) }}</span>
               <span class="language-level"> - {{ getLevel(lang.level) }}</span>
             </div>
             @if (lang.communication) {
