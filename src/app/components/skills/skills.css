@@ -97,8 +97,7 @@
 /* Responsive: Mobile (< 1024px) */
 @media (max-width: 1024px) {
   .skills-section {
-    padding: 15px 15px;
-    padding-top: 0;
+    padding: 0;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
