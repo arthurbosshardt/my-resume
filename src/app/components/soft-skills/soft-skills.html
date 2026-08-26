@@ -38,7 +38,32 @@
         @for (lang of skills()!.languages; track lang.name) {
           <div class="technical-subcategory language-card">
             <div class="language-name-level">
-              <span class="language-flag" aria-hidden="true" [innerHTML]="getLanguageFlag(lang.name)"></span>
+              <span class="language-flag" aria-hidden="true">
+                @switch (lang.name) {
+                  @case ('French') {
+                    <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="20" height="40" fill="#0055A4"/>
+                      <rect x="20" width="20" height="40" fill="#FFFFFF"/>
+                      <rect x="40" width="20" height="40" fill="#EF4135"/>
+                    </svg>
+                  }
+                  @case ('English') {
+                    <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="60" height="40" fill="#00247d"/>
+                      <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+                      <path d="M0,0 L60,40 M60,0 L0,40" stroke="#cf142b" stroke-width="4"/>
+                      <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="14"/>
+                      <path d="M30,0 V40 M0,20 H60" stroke="#cf142b" stroke-width="6"/>
+                    </svg>
+                  }
+                  @case ('Spanish') {
+                    <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="60" height="40" fill="#AA151B"/>
+                      <rect y="10" width="60" height="20" fill="#F1BF00"/>
+                    </svg>
+                  }
+                }
+              </span>
               <span class="language-name">{{ getLanguageName(lang.name) }}</span>
               <span class="language-level"> - {{ getLevel(lang.level) }}</span>
             </div>
