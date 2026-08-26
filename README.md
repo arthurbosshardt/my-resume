@@ -33,7 +33,7 @@ Les fichiers statiques sont générés dans `dist/resume/browser`.
 
 ## Déploiement
 
-Déployé sur [Vercel](https://vercel.com), avec la branche `develop` configurée comme branche de déploiement (push sur `develop` = déploiement).
+Déployé sur GitHub Pages via GitHub Actions (`.github/workflows/deploy-pages.yml`), avec la branche `develop` configurée comme branche de déploiement (push sur `develop` = déploiement). Le site est servi sur le domaine personnalisé `arthur-bosshardt-resume.org` (voir le fichier `public/CNAME`).
 
 ## Structure du projet
 
