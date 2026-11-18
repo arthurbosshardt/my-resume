@@ -134,6 +134,20 @@
   margin-bottom: 20px;
 }
 
+/* Vue PC : ce wrapper se trouve entre .skills-section (flex, hauteur contrainte)
+   et .technical-categories-grid (overflow-y: auto). Il doit transmettre la hauteur
+   contrainte (flex + min-height: 0), sinon la grille grandit avec son contenu,
+   n'est jamais scrollable et le bas est rogne par .resume-content. */
+@media (min-width: 1025px) {
+  .skills-category {
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .category-title {
   font-size: 1.1rem;
   font-weight: 600;
