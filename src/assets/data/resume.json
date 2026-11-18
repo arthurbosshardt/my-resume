@@ -19,9 +19,9 @@
       "projects": [
         {
           "client": "Crédit Agricole Technologies & Services",
-          "technologies": ["NodeJS", "Angular", "GitHub Copilot", "HTML", "CSS", "Bash", "Linux", "Elasticsearch", "Grafana", "Vitest", "Figma", "SQL", "PgAdmin", "Docker", "Helm", "ArgoCD", "Artifactory", "Typescript", "Javascript", "Postman", "VSCode", "Klaxoon", "GitLab CI/CD", "Jira", "Confluence", "REST", "AGILE", "Teams", "Outlook", "OneNote", "Word", "Sharepoint"],
+          "technologies": ["NodeJS", "Angular", "GitHub Copilot", "HTML", "CSS", "Bash", "Linux", "Elasticsearch", "Grafana", "Vitest", "Figma", "SQL", "PgAdmin", "Docker", "Helm", "ArgoCD", "Artifactory", "Typescript", "Javascript", "Postman", "VSCode", "Klaxoon", "GitLab CI/CD", "Jira", "Confluence", "REST", "AGILE", "Teams", "Outlook", "OneNote", "Word", "Sharepoint", "Orchestration d'agent", "Gestion des skills", "Gestion de fichiers d'instructions", "Automatisation de process", "Optimisation de contexte", "Haiku", "Sonnet", "Sol", "Grok", "Luna", "Codex"],
           "shortDescription": "Fully autonomous design and development of the online subscription (self-care) journey for the CAWL (Crédit Agricole Worldline) professional payment offer. Front-end expert role (Angular / NodeJS) within the cross-functional chapter (Spotify model) for the payment commercial squad.",
-          "description": "Full development of the digital self-care subscription journey (a 100% autonomous process allowing professional clients to configure and finalize their online payment offer up to electronic contract signature). The CAWL project (similar to SumUp) covers equipment selection (mobile card readers, hardware card readers, or remote payment), configuration of accepted payment methods (American Express, etc.), and handling of business-specific requirements. As referent and expert of the cross-functional front-end chapter, close pairing with UX/UI designers in Figma is required to translate the mockups. Front-end architecture built on the latest version of Angular, backed by a BFF (Backend For Frontend) layer in NodeJS developed with GitHub Copilot assistance. Used the internal MUESLI design system. Worked autonomously on the front-end within a dedicated Squad (1 developer, 2 Business Analysts, 1 Product Owner) under Agile methodology with Jira, Confluence and Microsoft Teams."
+          "description": "Full development of the digital self-care subscription journey (a 100% autonomous process allowing professional clients to configure and finalize their online payment offer up to electronic contract signature). The CAWL project (similar to SumUp) covers equipment selection (mobile card readers, hardware card readers, or remote payment), configuration of accepted payment methods (American Express, etc.), and handling of business-specific requirements. As referent and expert of the cross-functional front-end chapter, close pairing with UX/UI designers in Figma is required to translate the mockups. Front-end architecture built on the latest version of Angular, backed by a BFF (Backend For Frontend) layer in NodeJS developed with GitHub Copilot assistance. Used the internal MUESLI design system. Worked autonomously on the front-end within a dedicated Squad (1 developer, 2 Business Analysts, 1 Product Owner) under Agile methodology with Jira, Confluence and Microsoft Teams. Intensive use of AI and constant awareness of how it is used across the whole development pipeline."
         }
       ]
     },
@@ -192,7 +192,18 @@
         "Gemini",
         "TensorFlow",
         "Speech to text",
-        "LLM"
+        "LLM",
+        "Orchestration d'agent",
+        "Gestion des skills",
+        "Gestion de fichiers d'instructions",
+        "Automatisation de process",
+        "Optimisation de contexte",
+        "Haiku",
+        "Sonnet",
+        "Sol",
+        "Grok",
+        "Luna",
+        "Codex"
       ],
       "projectTools": [
         "Figma",
