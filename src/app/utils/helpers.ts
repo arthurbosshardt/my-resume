@@ -7,11 +7,11 @@ interface TechCategory {
 
 const TECH_CATEGORY_ORDER: TechCategory[] = [
   { key: 'languagesFrameworks', icon: 'fa-solid fa-code' },
+  { key: 'ai', icon: 'fa-solid fa-brain' },
   { key: 'cicd', icon: 'fa-solid fa-rocket' },
   { key: 'softwares', icon: 'fa-solid fa-laptop' },
   { key: 'testing', icon: 'fa-solid fa-circle-check' },
   { key: 'projectTools', icon: 'fa-solid fa-diagram-project' },
-  { key: 'ai', icon: 'fa-solid fa-brain' },
   { key: 'concepts', icon: 'fa-solid fa-lightbulb' }
 ];
 

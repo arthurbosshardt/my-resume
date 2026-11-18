@@ -18,6 +18,22 @@
           </div>
         }
 
+        @if (skills()!.ai && skills()!.ai.length > 0) {
+          <div class="technical-subcategory">
+            <div class="subcategory-header">
+              <h4 class="subcategory-title">
+                <i class="fa-solid fa-brain subcategory-icon"></i>
+                {{ i18n.t('skills.ai') }}
+              </h4>
+            </div>
+            <div class="skills-tags">
+              @for (skill of sortAlphabetically(skills()!.ai); track skill) {
+                <span class="skill-tag">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        }
+
         @if (skills()!.cicd && skills()!.cicd.length > 0) {
           <div class="technical-subcategory">
             <div class="subcategory-header">
@@ -76,22 +92,6 @@
             </div>
             <div class="skills-tags">
               @for (skill of sortAlphabetically(skills()!.projectTools); track skill) {
-                <span class="skill-tag">{{ skill }}</span>
-              }
-            </div>
-          </div>
-        }
-
-        @if (skills()!.ai && skills()!.ai.length > 0) {
-          <div class="technical-subcategory">
-            <div class="subcategory-header">
-              <h4 class="subcategory-title">
-                <i class="fa-solid fa-brain subcategory-icon"></i>
-                {{ i18n.t('skills.ai') }}
-              </h4>
-            </div>
-            <div class="skills-tags">
-              @for (skill of sortAlphabetically(skills()!.ai); track skill) {
                 <span class="skill-tag">{{ skill }}</span>
               }
             </div>
